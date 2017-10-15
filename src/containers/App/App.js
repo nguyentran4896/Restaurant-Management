@@ -6,13 +6,13 @@ import {
 
 // components
 import Header from 'components/header/header'
-import Footer from 'components/footer/footer'
 import Sidebar from 'components/sidebar/sidebar'
 import Homepage from 'components/pages/homepage/homepage'
 import Menu from 'components/pages/menu/menu'
 import EventDetail from 'components/pages/event-detail/event-detail'
 import Events from 'components/pages/events/events'
 import TableBoard from 'components/pages/table-board/table-board'
+import FeedbackForm from 'components/feedback-modal/feedback-modal'
 
 // includes
 import 'stylesheets/App.min.css'
@@ -33,6 +33,8 @@ class App extends Component {
               <Route exact path='/event-detail' component={EventDetail} />
               <Route exact path='/events' component={Events} />
               <Route exact path='/table-board' component={TableBoard} />
+              {/* <Route exact path='/feedback' component={FeedbackForm} /> */}
+              <FeedbackForm />
             </div>
           </div>
         </div>

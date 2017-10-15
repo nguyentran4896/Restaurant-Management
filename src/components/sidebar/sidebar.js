@@ -59,7 +59,7 @@ class Sidebar extends Component {
                 <a href='#'>ĐẶT BÀN</a>
               </li>
               <li>
-                <a href='#'>FEEDBACK</a>
+                <a data-toggle='modal' data-target='#feedback-modal' href='#' atl='Feedback'>FEEDBACK</a>
               </li>
             </ul>
           </div>
