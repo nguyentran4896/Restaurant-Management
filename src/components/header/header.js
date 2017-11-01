@@ -1,47 +1,114 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import {	
+	Link
+} from 'react-router-dom';
 
 import 'stylesheets/header.min.css'
 
 class Header extends Component {
-  render () {
+  render() {
     return (
-      <div>
-        <nav className='navbar navbar-default'>
-          <div className='navbar-right'>
-            <button type='submit' className='btn btn-default' data-toggle='modal' data-target='#login-modal'>Login</button>
-            <button type='submit' className='btn btn-default' data-toggle='modal' data-target='#register-modal'>Register</button>
-          </div>
-        </nav>
-        <div className='modal fade' id='login-modal' tabIndex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>
-          <div className='modal-dialog'>
-            <div className='loginmodal-container'>
-              <h1>Login to Your Account</h1><br />
-              <form>
-                <input type='text' name='user' placeholder='Username' />
-                <input type='password' name='pass' placeholder='Password' />
-                <input type='submit' name='login' className='login loginmodal-submit' value='Login' />
-              </form>
-            </div>
-          </div>
-        </div>
-        <div className='modal fade' id='register-modal' tabIndex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>
-          <div className='modal-dialog'>
-            <div className='loginmodal-container'>
-              <h1>Register Account</h1><br />
-              <form>
-                <input type='text' name='user' placeholder='Username' />
-                <input type='text' name='email' placeholder='Email' />
-                <input type='text' name='phone' placeholder='Phone Number' />
-                <input type='password' name='pass' placeholder='Password' />
-                <input type='password' name='comfirm-pass' placeholder='Comfirm password' />
-                <input type='submit' name='login' className='login loginmodal-submit' value='Register' />
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    )
+		<header id='header'>
+			<div id='header-wrap'>
+				<div className='container clearfix'>
+					<div id='primary-menu-trigger'><i className='icon-reorder'></i></div>
+					{/* <!-- Logo */}
+					<div id='logo'>
+						<a href='#' className='standard-logo' data-dark-logo={require('images/logo-resto.png')}>
+              <img src={require('images/logo-resto.png')} alt='Canvas Logo' />
+            </a>
+						<a href='#' className='retina-logo' data-dark-logo={require('images/logo-resto.png')}>
+              <img src={require('images/logo@2x.png')} alt='Canvas Logo' />
+            </a>
+					</div>
+
+					{/* <!-- Primary Navigation */}
+					<nav id='primary-menu' className='style-5'>
+
+						<ul className='norightborder norightpadding norightmargin'>
+							<li className='current'><a href='#'><div><i className='icon-home2'></i>Home</div></a>
+								<ul>
+									<li><a href='#'><div>Home - Corporate</div></a>
+										<ul>
+											<li><a href='#'><div>Corporate - Layout 1</div></a></li>
+											<li><a href='#'><div>Corporate - Layout 2</div></a></li>
+											<li><a href='#'><div>Corporate - Layout 3</div></a></li>
+											<li><a href='#'><div>Corporate - Layout 4</div></a></li>
+										</ul>
+									</li>
+									<li><a href='index-portfolio.html'><div>Home - Portfolio</div></a>
+										<ul>
+											<li><a href='index-portfolio.html'><div>Portfolio - Layout 1</div></a></li>
+											<li><a href='index-portfolio-2.html'><div>Portfolio - Layout 2</div></a></li>
+											<li><a href='index-portfolio-3.html'><div>Portfolio - Masonry</div></a></li>
+											<li><a href='index-portfolio-4.html'><div>Portfolio - AJAX</div></a></li>
+										</ul>
+									</li>
+									<li><a href='index-blog.html'><div>Home - Blog</div></a>
+										<ul>
+											<li><a href='index-blog.html'><div>Blog - Layout 1</div></a></li>
+											<li><a href='index-blog-2.html'><div>Blog - Layout 2</div></a></li>
+											<li><a href='index-blog-3.html'><div>Blog - Layout 3</div></a></li>
+										</ul>
+									</li>
+									<li><a href='index-shop.html'><div>Home - Shop</div></a>
+										<ul>
+											<li><a href='index-shop.html'><div>Shop - Layout 1</div></a></li>
+											<li><a href='index-shop-2.html'><div>Shop - Layout 2</div></a></li>
+										</ul>
+									</li>
+									<li><a href='index-magazine.html'><div>Home - Magazine</div></a>
+										<ul>
+											<li><a href='index-magazine.html'><div>Magazine - Layout 1</div></a></li>
+											<li><a href='index-magazine-2.html'><div>Magazine - Layout 2</div></a></li>
+											<li><a href='index-magazine-3.html'><div>Magazine - Layout 3</div></a></li>
+										</ul>
+									</li>
+									<li><a href='landing.html'><div>Home - Landing Page</div></a>
+										<ul>
+											<li><a href='landing.html'><div>Landing Page - Layout 1</div></a></li>
+											<li><a href='landing-2.html'><div>Landing Page - Layout 2</div></a></li>
+											<li><a href='landing-3.html'><div>Landing Page - Layout 3</div></a></li>
+											<li><a href='landing-4.html'><div>Landing Page - Layout 4</div></a></li>
+											<li><a href='landing-5.html'><div>Landing Page - Layout 5</div></a></li>
+										</ul>
+									</li>
+									<li><a href='index-fullscreen-image.html'><div>Home - Full Screen</div></a>
+										<ul>
+											<li><a href='index-fullscreen-image.html'><div>Full Screen - Image</div></a></li>
+											<li><a href='index-fullscreen-slider.html'><div>Full Screen - Slider</div></a></li>
+											<li><a href='index-fullscreen-video.html'><div>Full Screen - Video</div></a></li>
+										</ul>
+									</li>
+									<li><a href='index-onepage.html'><div>Home - One Page</div></a>
+										<ul>
+											<li><a href='index-onepage.html'><div>One Page - Default</div></a></li>
+											<li><a href='index-onepage-2.html'><div>One Page - Submenu</div></a></li>
+											<li><a href='index-onepage-3.html'><div>One Page - Dots Style</div></a></li>
+										</ul>
+									</li>
+									<li><a href='index-wedding.html'><div>Home - Wedding</div></a></li>
+									<li><a href='index-restaurant.html'><div>Home - Restaurant</div></a></li>
+									<li><a href='index-events.html'><div>Home - Events</div></a></li>
+									<li><a href='index-parallax.html'><div>Home - Parallax</div></a></li>
+									<li><a href='index-app-showcase.html'><div>Home - App Showcase</div></a></li>
+								</ul>
+							</li>
+							<li><a href='#'><div><i className='icon-file-alt'></i>Menu</div></a></li>
+							<li><a href='#'><div><i className='icon-users2'></i>Staff</div></a></li>
+							<li><a href='#'><div><i className='icon-picture'></i>Gallery</div></a></li>
+							<li><a href='#'><div><i className='icon-star3'></i>Reviews</div></a></li>
+							<li><a href='#'><div><i className='icon-pencil2'></i>Blog</div></a></li>
+							<li><a href='#'><div><i className='icon-map-marker2'></i>Contact</div></a></li>
+							<li><a href='#'><div><i className='icon-th'></i>Demos</div></a></li>
+						</ul>
+
+					</nav>
+				</div>
+			</div>
+		</header>
+    );
   }
 }
 
-export default Header
+export default Header;

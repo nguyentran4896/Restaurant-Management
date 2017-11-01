@@ -3,8 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "interact.js": "^1.2.8",
-    "interactjs": "^1.2.9",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-router-dom": "^4.2.2",
@@ -14,12 +12,16 @@
   "scripts": {
     "start": "NODE_PATH=src react-scripts start",
     "build": "NODE_PATH=src react-scripts build",
-    "test": "standard && NODE_PATH=src react-scripts test --env=jsdom",
+    "test": "NODE_PATH=src react-scripts test --env=jsdom",
     "eject": "NODE_PATH=src react-scripts eject"
   },
   "devDependencies": {
-    "eslint": "^4.9.0",
-    "eslint-plugin-react": "^7.4.0",
-    "standard": "^10.0.3"
+    "babel-eslint": "^7.2.3",
+    "eslint": "^4.10.0",
+    "eslint-config-react-app": "^2.0.1",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.4.0"
   }
 }
