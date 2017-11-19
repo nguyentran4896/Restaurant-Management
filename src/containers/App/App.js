@@ -24,6 +24,7 @@ class App extends Component {
             <div className='container-fluid no-padding'>
               <Slider />
               <div className='clear' />
+              <br />
               <Header />
               <div className='clear' />
               <Route exact path='/' component={Homepage} />

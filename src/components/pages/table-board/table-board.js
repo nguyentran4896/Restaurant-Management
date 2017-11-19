@@ -34,7 +34,7 @@ function example (tableName) {
     <div>
       <Interactive draggable draggableOptions={draggableOptions}>
         <div style={avatarStyle} className='table-wrapper'>
-          <input className='table-number' value={tableName} />
+          <input className='table-number' readOnly value={tableName} />
         </div>
       </Interactive>
     </div>

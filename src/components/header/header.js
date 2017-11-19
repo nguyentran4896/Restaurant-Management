@@ -26,7 +26,7 @@ class Header extends Component {
             <nav id='primary-menu' className='style-5'>
 
               <ul className='norightborder norightpadding norightmargin'>
-                <li className='current'><Link to='/'><div><i className='icon-home2' />Home</div></Link>
+                <li className='current'><Link to='/'><div><i className='fa fa-cutlery' aria-hidden='true' />Home</div></Link>
                   <ul>
                     <li><a href='#'><div>Home - Corporate</div></a>
                       <ul>
@@ -94,10 +94,10 @@ class Header extends Component {
                     <li><a href='index-app-showcase.html'><div>Home - App Showcase</div></a></li>
                   </ul>
                 </li>
-                <li><Link to='/menu'><div><i className='icon-file-alt' />Menu</div></Link></li>
-                <li><Link to='/event-detail'><div><i className='icon-users2' />Event detail</div></Link></li>
-                <li><Link to='/events'><div><i className='icon-picture' />Events</div></Link></li>
-                <li><Link to='/table-board'><div><i className='icon-star3' />Table board</div></Link></li>
+                <li><Link to='/menu'><div><i className='fa fa-navicon' aria-hidden='true' />Menu</div></Link></li>
+                <li><Link to='/event-detail'><div><i className='fa fa-star' aria-hidden='true' />Event detail</div></Link></li>
+                <li><Link to='/events'><div><i className='fa fa-shopping-cart' aria-hidden='true' />Events</div></Link></li>
+                <li><Link to='/table-board'><div><i className='fa fa-cogs' aria-hidden='true' />Table board</div></Link></li>
                 <li><a href='#'><div><i className='icon-pencil2' />Blog</div></a></li>
                 <li><a href='#'><div><i className='icon-map-marker2' />Contact</div></a></li>
                 <li><a href='#'><div><i className='icon-th' />Demos</div></a></li>

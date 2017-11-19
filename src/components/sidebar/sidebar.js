@@ -16,7 +16,6 @@ class Sidebar extends Component {
               <span className='icon-bar' />
             </button>
             <Link className='navbar-brand header-text' to='/'>
-              {/* <img id='logo-img' src={require('images/logo.jpg')} alt='' /> */}
               BK-Food
             </Link>
           </div>
