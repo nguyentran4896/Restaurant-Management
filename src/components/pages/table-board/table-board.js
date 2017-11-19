@@ -4,7 +4,7 @@ import React, {
 
 import 'stylesheets/table-board.min.css'
 
-import Interactive from 'components/interact/interact'
+import Interactive from 'components/interact/interact.js'
 
 const draggableOptions = {
   onmove: event => {
