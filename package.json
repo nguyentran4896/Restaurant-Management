@@ -10,7 +10,7 @@
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.14"
   },
-  "homepage": "https://nguyentran4896.github.io/Restaurant-Management/",
+  "homepage": ".",
   "scripts": {
     "start": "NODE_PATH=src react-scripts start",
     "build": "NODE_PATH=src react-scripts build",
