@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "gh-pages": "^1.1.0",
     "interact.js": "^1.2.8",
     "interactjs": "^1.2.9",
     "react": "^16.0.0",
