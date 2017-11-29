@@ -51,8 +51,5 @@ typings/
 # Output of 'npm pack'
 *.tgz
 
-# .vscode
-.vscode/
-
-#build bundle
+# build bundle
 build/

@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "gh-pages": "^1.1.0",
     "interact.js": "^1.2.8",
     "interactjs": "^1.2.9",
     "react": "^16.0.0",
@@ -11,7 +10,7 @@
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.14"
   },
-  "homepage": ".",
+  "homepage": "https://nguyentran4896.github.io/restaurant",
   "scripts": {
     "start": "NODE_PATH=src react-scripts start",
     "build": "NODE_PATH=src react-scripts build",
@@ -32,6 +31,7 @@
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-react": "^7.5.0",
-    "eslint-plugin-standard": "^3.0.1"
+    "eslint-plugin-standard": "^3.0.1",
+    "gh-pages": "^1.1.0"
   }
 }
