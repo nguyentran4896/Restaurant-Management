@@ -2,16 +2,21 @@ import React, {
   Component
 } from 'react'
 
-// import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom'
 
 import 'stylesheets/homepage.min.css'
 import Slider from '../../slider/slider'
 
 class Homepage extends Component {
+  componentDidMount () {
+    ReactDOM.render((<Slider />), document.getElementById('slider'))
+  }
+
   render () {
     return (
       <div>
-        <Slider />
+        {/* <Slider /> */}
+        <div id='slider' />
         <div className='clear' />
         <section id='content'>
           <div className='content-wrap'>
