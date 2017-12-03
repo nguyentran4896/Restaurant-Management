@@ -1,12 +1,13 @@
 .table-container {
 	height: 80vh;
+	border: 2px solid black;
 }
 .table-container > div{
 	display: inline-block;
 
 	.table-wrapper {
-		width: 200px;
-		height: 200px;
+		width: 100px;
+		height: 100px;
 		background: center no-repeat;
 		background-size: cover;
 		display: flex;

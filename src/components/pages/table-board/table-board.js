@@ -44,7 +44,7 @@ function example (tableName) {
 class TableBoard extends Component {
   render () {
     return (
-      <div className='row table-container'>
+      <div className='container-fluid table-container'>
         {example('Bàn 1')}
         {example('Bàn 2')}
         {example('Bàn 3')}
