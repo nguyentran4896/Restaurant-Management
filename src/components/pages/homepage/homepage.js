@@ -2,12 +2,13 @@ import React, {
   Component
 } from 'react'
 
+// import ReactDOM from 'react-dom'
+
 import 'stylesheets/homepage.min.css'
 import Slider from '../../slider/slider'
 
 class Homepage extends Component {
   render () {
-    
     return (
       <div>
         <Slider />
@@ -257,4 +258,7 @@ class Homepage extends Component {
     )
   }
 }
+
+// ReactDOM.render((<Slider />), document.getElementById('slider'))
+
 export default Homepage
