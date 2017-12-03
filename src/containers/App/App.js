@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom'
 // components
 import Header from 'components/header/header'
-import Slider from 'components/slider/slider'
+// import Slider from 'components/slider/slider'
 import Homepage from 'components/pages/homepage/homepage'
 import Menu from 'components/pages/menu/menu'
 import EventDetail from 'components/pages/event-detail/event-detail'
@@ -22,9 +22,6 @@ class App extends Component {
         <div className='App'>
           <div className='container-fluid no-padding'>
             <div className='container-fluid no-padding'>
-              <Slider />
-              <div className='clear' />
-              <br />
               <Header />
               <div className='clear' />
               <Route exact path='/' component={Homepage} />
