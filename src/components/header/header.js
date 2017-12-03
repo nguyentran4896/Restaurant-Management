@@ -57,45 +57,9 @@ class Header extends Component {
                         <li><a href='index-shop-2.html'><div>Shop - Layout 2</div></a></li>
                       </ul>
                     </li>
-                    <li><a href='index-magazine.html'><div>Home - Magazine</div></a>
-                      <ul>
-                        <li><a href='index-magazine.html'><div>Magazine - Layout 1</div></a></li>
-                        <li><a href='index-magazine-2.html'><div>Magazine - Layout 2</div></a></li>
-                        <li><a href='index-magazine-3.html'><div>Magazine - Layout 3</div></a></li>
-                      </ul>
-                    </li>
-                    <li><a href='landing.html'><div>Home - Landing Page</div></a>
-                      <ul>
-                        <li><a href='landing.html'><div>Landing Page - Layout 1</div></a></li>
-                        <li><a href='landing-2.html'><div>Landing Page - Layout 2</div></a></li>
-                        <li><a href='landing-3.html'><div>Landing Page - Layout 3</div></a></li>
-                        <li><a href='landing-4.html'><div>Landing Page - Layout 4</div></a></li>
-                        <li><a href='landing-5.html'><div>Landing Page - Layout 5</div></a></li>
-                      </ul>
-                    </li>
-                    <li><a href='index-fullscreen-image.html'><div>Home - Full Screen</div></a>
-                      <ul>
-                        <li><a href='index-fullscreen-image.html'><div>Full Screen - Image</div></a></li>
-                        <li><a href='index-fullscreen-slider.html'><div>Full Screen - Slider</div></a></li>
-                        <li><a href='index-fullscreen-video.html'><div>Full Screen - Video</div></a></li>
-                      </ul>
-                    </li>
-                    <li><a href='index-onepage.html'><div>Home - One Page</div></a>
-                      <ul>
-                        <li><a href='index-onepage.html'><div>One Page - Default</div></a></li>
-                        <li><a href='index-onepage-2.html'><div>One Page - Submenu</div></a></li>
-                        <li><a href='index-onepage-3.html'><div>One Page - Dots Style</div></a></li>
-                      </ul>
-                    </li>
-                    <li><a href='index-wedding.html'><div>Home - Wedding</div></a></li>
-                    <li><a href='index-restaurant.html'><div>Home - Restaurant</div></a></li>
-                    <li><a href='index-events.html'><div>Home - Events</div></a></li>
-                    <li><a href='index-parallax.html'><div>Home - Parallax</div></a></li>
-                    <li><a href='index-app-showcase.html'><div>Home - App Showcase</div></a></li>
                   </ul>
                 </li>
                 <li><Link to='/menu'><div><i className='fa fa-navicon' aria-hidden='true' />Menu</div></Link></li>
-                <li><Link to='/event-detail'><div><i className='fa fa-star' aria-hidden='true' />Event detail</div></Link></li>
                 <li><Link to='/events'><div><i className='fa fa-shopping-cart' aria-hidden='true' />Events</div></Link></li>
                 <li><Link to='/table-board'><div><i className='fa fa-cogs' aria-hidden='true' />Table board</div></Link></li>
                 <li><a href='#'><div><i className='icon-pencil2' />Blog</div></a></li>

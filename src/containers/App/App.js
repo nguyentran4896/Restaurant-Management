@@ -8,7 +8,6 @@ import Header from 'components/header/header'
 // import Slider from 'components/slider/slider'
 import Homepage from 'components/pages/homepage/homepage'
 import Menu from 'components/pages/menu/menu'
-import EventDetail from 'components/pages/event-detail/event-detail'
 import Events from 'components/pages/events/events'
 import TableBoard from 'components/pages/table-board/table-board'
 
@@ -26,7 +25,6 @@ class App extends Component {
               <div className='clear' />
               <Route exact path='/' component={Homepage} />
               <Route exact path='/menu' component={Menu} />
-              <Route exact path='/event-detail' component={EventDetail} />
               <Route exact path='/events' component={Events} />
               <Route exact path='/table-board' component={TableBoard} />
             </div>
