@@ -359,7 +359,7 @@ class Menu extends Component {
 
   render () {
     return (
-      <div className='container'>
+      <div className='container-fluid no-padding'>
         <Products
           productsList={this.state.products}
           searchTerm={this.state.term}
