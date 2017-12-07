@@ -264,6 +264,4 @@ class Homepage extends Component {
   }
 }
 
-// ReactDOM.render((<Slider />), document.getElementById('slider'))
-
 export default Homepage
