@@ -5,11 +5,12 @@ import {
 } from 'react-router-dom'
 // components
 import Header from 'components/header/header'
-// import Slider from 'components/slider/slider'z
+// import Slider from 'components/slider/slider'
 import Homepage from 'components/pages/homepage/homepage'
 import Menu from 'components/pages/menu/menu'
 import Events from 'components/pages/events/events'
 import TableBoard from 'components/pages/table-board/table-board'
+import Auth from 'components/pages/auth/auth'
 
 // includes
 import 'stylesheets/App.min.css'
@@ -73,6 +74,7 @@ class App extends Component {
               <Route exact path='/menu' component={Menu} />
               <Route exact path='/events' component={Events} />
               <Route exact path='/table-board' component={TableBoard} />
+              <Route exact path='/auth' component={Auth} />
             </div>
           </div>
         </div>

@@ -108,8 +108,7 @@ class Header extends Component {
                 <li><Link to='/events'><div><i className='fa fa-shopping-cart' aria-hidden='true' />Khuyến mãi</div></Link></li>
                 <li><Link to='/table-board'><div><i className='fa fa-cogs' aria-hidden='true' />Sơ đồ bàn ăn</div></Link></li>
                 <li><a href='#'><div><i className='icon-pencil2' />Bài viết</div></a></li>
-                <li><a href='#'><div><i className='icon-map-marker2' />Liên hệ</div></a></li>
-                <li><a href='#'><div><i className='icon-th' />Demos</div></a></li>
+                <li><Link to='/auth'><div><i className='fa fa-lock' aria-hidden='true' />Đăng ký/Đăng nhập</div></Link></li>
               </ul>
 
               <div id='top-search'>
