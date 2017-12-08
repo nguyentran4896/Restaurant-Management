@@ -118,9 +118,16 @@ class Header extends Component {
                   <i className='icon-search3' />
                   <i className='icon-line-cross' />
                 </a>
-                <form action='search.html' method='get'>
-                  <input type='text' name='q' className='form-control' value='' placeholder='Type &amp; Hit Enter..' />
+                <form action='#' method='get'>
+                  <input type='search' name='q' ref='searchBox' className='form-control search-keyword' defaultValue=''
+                    placeholder='Gõ &amp; nhấn Enter..' onChange={this.props.handleSearch} />
                 </form>
+
+                {/* <form action="#" method="get" className={this.state.mobileSearch ? "search-form active" : "search-form"}>
+                  <a className="back-button" href="#" onClick={this.handleSearchNav.bind(this)}><img src="https://res.cloudinary.com/sivadass/image/upload/v1494756030/icons/back.png" alt="back"/></a>
+                  <input type="search" ref="searchBox" placeholder="Search for Vegetables and Fruits" className="search-keyword" onChange={this.props.handleSearch}/>
+                  <button className="search-button" type="submit" onClick={this.handleSubmit.bind(this)}></button>
+                </form> */}
               </div>
 
               <div id='top-cart'>

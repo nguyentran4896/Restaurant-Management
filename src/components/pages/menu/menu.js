@@ -142,7 +142,6 @@ class Menu extends Component {
   // Filter by Category
   handleCategory (event) {
     this.setState({ category: event.target.value })
-    console.log(this.state.category)
   }
   // Add to Cart
   handleAddToCart (selectedProducts) {
