@@ -7,7 +7,7 @@ class Product extends Component {
     this.state = {
       selectedProduct: {},
       quickViewProdcut: {},
-      buttonLabel: 'ADD TO CART'
+      buttonLabel: 'GỌI MÓN'
     }
   }
 
@@ -24,10 +24,10 @@ class Product extends Component {
       this.props.addToCart(this.state.selectedProduct)
     })
     this.setState({
-      buttonLabel: '✔ ADDED'
+      buttonLabel: '✔ ĐÃ GỌI'
     }, function () {
       setTimeout(() => {
-        this.setState({ buttonLabel: 'ADD TO CART' })
+        this.setState({ buttonLabel: 'GỌI THÊM' })
       }, 5000)
     })
   }
