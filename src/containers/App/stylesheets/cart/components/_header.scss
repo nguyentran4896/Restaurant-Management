@@ -73,16 +73,16 @@
 }
 
 // Cart
-.cart{
-    display: flex;
-    display: -webkit-flex;
-    margin-left: 64px;
-    position: relative;
-    z-index: 99;
-    @media (max-width: 991px){
-        margin-left: 16px;
-    }
-}
+// .cart{
+//     display: flex;
+//     display: -webkit-flex;
+//     margin-left: 64px;
+//     position: relative;
+//     z-index: 99;
+//     @media (max-width: 991px){
+//         margin-left: 16px;
+//     }
+// }
 .cart-info{
     @media (max-width: 991px){
         display: none;

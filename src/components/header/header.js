@@ -52,6 +52,10 @@ class Header extends Component {
       }
     }
   }
+  handleGoToOrderDetail (e) {
+    e.preventDefault()
+    window.location.assign('/order-detail')
+  }
   componentDidMount () {
     document.addEventListener('click', this.handleClickOutside.bind(this), true)
   }
@@ -130,7 +134,7 @@ class Header extends Component {
                     {view}
                   </CartScrollBar>
                   <div className='action-block'>
-                    <button type='button' className={this.state.cart.length > 0 ? ' ' : 'disabled'}>PROCEED TO CHECKOUT</button>
+                    <button type='button' onClick={this.handleGoToOrderDetail} className={this.state.cart.length > 0 ? ' ' : 'disabled-'}>XEM CHI TIẾT</button>
                   </div>
                 </div>
               </div>
