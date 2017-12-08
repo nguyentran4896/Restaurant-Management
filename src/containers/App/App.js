@@ -11,6 +11,7 @@ import Menu from 'components/pages/menu/menu'
 import Events from 'components/pages/events/events'
 import TableBoard from 'components/pages/table-board/table-board'
 import Auth from 'components/pages/auth/auth'
+import Feedback from 'components/pages/feedback/feedback'
 
 // includes
 import 'stylesheets/App.min.css'
@@ -75,6 +76,7 @@ class App extends Component {
               <Route exact path='/events' component={Events} />
               <Route exact path='/table-board' component={TableBoard} />
               <Route exact path='/auth' component={Auth} />
+              <Route exact path='/feedback' component={Feedback} />
             </div>
           </div>
         </div>

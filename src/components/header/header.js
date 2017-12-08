@@ -88,7 +88,6 @@ class Header extends Component {
         <div id='header-wrap'>
           <div className='container clearfix'>
             <div id='primary-menu-trigger'><i className='icon-reorder' /></div>
-            {/* <!-- Logo */}
             <div id='logo'>
               <a href='#' className='standard-logo' data-dark-logo={require('images/logo-resto.png')}>
                 <img src={require('images/logo-resto.png')} alt='Canvas Logo' />
@@ -98,7 +97,6 @@ class Header extends Component {
               </a>
             </div>
 
-            {/* <!-- Primary Navigation */}
             <nav id='primary-menu' className='style-5'>
               <ul className='norightborder norightpadding norightmargin'>
                 <li className='current'>
@@ -107,7 +105,7 @@ class Header extends Component {
                 <li><Link to='/menu'><div><i className='fa fa-navicon' aria-hidden='true' />Thực đơn</div></Link></li>
                 <li><Link to='/events'><div><i className='fa fa-shopping-cart' aria-hidden='true' />Khuyến mãi</div></Link></li>
                 <li><Link to='/table-board'><div><i className='fa fa-cogs' aria-hidden='true' />Sơ đồ bàn ăn</div></Link></li>
-                <li><a href='#'><div><i className='icon-pencil2' />Bài viết</div></a></li>
+                <li><Link to='/feedback'><div><i className='icon-pencil2' />Feedback</div></Link></li>
                 <li><Link to='/auth'><div><i className='fa fa-lock' aria-hidden='true' />Đăng ký/Đăng nhập</div></Link></li>
               </ul>
 
@@ -136,10 +134,10 @@ class Header extends Component {
                   </div>
                 </div>
               </div>
-
             </nav>
           </div>
         </div>
+
       </header>
     )
   }
