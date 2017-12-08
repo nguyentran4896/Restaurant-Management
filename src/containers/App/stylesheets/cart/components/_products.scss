@@ -20,9 +20,9 @@
         padding: 8px;
     }
     .product{
-        min-height: 355px;
-        flex-basis: calc(25% - 32px);
-        -webkit-flex-basis: calc(25% - 32px);
+        min-height: 155px;
+        flex-basis: calc(33.33333% - 32px);
+        -webkit-flex-basis: calc(33.33333% - 32px);
         @media (max-width: 768px){
             flex-basis: calc(33% - 16px);
             -webkit-flex-basis: calc(33% - 16px);

@@ -54,8 +54,11 @@ class Product extends Component {
         <div className='product-image'>
           <img src={image} alt={this.props.name} onClick={this.quickView.bind(this, image, name, price, id, quantity)} />
         </div>
-        <h4 className='product-name'>{this.props.name}</h4>
-        <p className='product-price'>{this.props.price}</p>
+        <div className='container-fluid name-price-wrapper'>
+          <h4 className='product-name pull-left'>{this.props.name}</h4>
+          <p className='product-price pull-right'>{this.props.price}</p>
+        </div>
+
         <Counter productQuantity={quantity} updateQuantity={this.props.updateQuantity} />
         <div className='product-action'>
           <button type='button' onClick={this.addToCart.bind(this, image, name, price, id, quantity)}>{this.state.buttonLabel}</button>
