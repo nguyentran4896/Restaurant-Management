@@ -24,11 +24,11 @@ class Homepage extends Component {
               <div className='col_one_third nobottommargin'>
                 <div className='feature-box media-box'>
                   <div className='fbox-media'>
-                    <img src={require('images/restaurant/thumb/3.jpg')} alt='Why choose Us?' />
+                    <img src={require('images/restaurant.jpg')} alt='Why choose Us?' />
                   </div>
                   <div className='fbox-desc'>
-                    <h3>Why choose Us.<span className='subtitle'>Because we are Reliable.</span></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum est voluptatem accusamus molestiae eaque perspiciatis mollitia.</p>
+                    <h3>Sự lựa chọn tốt nhất.<span className='subtitle'>Khảo sát 300 khách hàng của Evashow</span></h3>
+                    <p>Với phương châm chất lượng hàng đầu, BK Food tự hào đón nhận sự hài lòng của 98% khách hàng sử dụng dịch vụ!</p>
                   </div>
                 </div>
               </div>
@@ -36,11 +36,11 @@ class Homepage extends Component {
               <div className='col_one_third nobottommargin'>
                 <div className='feature-box media-box'>
                   <div className='fbox-media'>
-                    <img src={require('images/restaurant/thumb/16.jpg')} alt='Why choose Us?' />
+                    <img src={require('images/restaurant-2.jpg')} alt='Why choose Us?' />
                   </div>
                   <div className='fbox-desc'>
-                    <h3>Our Mission.<span className='subtitle'>To Redefine your Brand.</span></h3>
-                    <p>Quos, non, esse eligendi ab accusantium voluptatem. Maxime eligendi beatae, atque tempora ullam. Vitae delectus quia, consequuntur rerum molestias quo.</p>
+                    <h3>Sứ mệnh.<span className='subtitle'>Kết hợp văn hóa ẩm thực năm châu.</span></h3>
+                    <p>Sự đa dạng là một trong những yếu tố quan trọng trong sứ mệnh phục vụ của chúng tôi. Mang đến sự tươi mới, hấp dẫn mỗi ngày trong thực đơn.</p>
                   </div>
                 </div>
               </div>
@@ -48,11 +48,11 @@ class Homepage extends Component {
               <div className='col_one_third nobottommargin col_last'>
                 <div className='feature-box media-box'>
                   <div className='fbox-media'>
-                    <img src={require('images/restaurant/thumb/12.jpg')} alt='Why choose Us?' />
+                    <img src={require('images/restaurant-3.jpg')} alt='Why choose Us?' />
                   </div>
                   <div className='fbox-desc'>
-                    <h3>What we Do.<span className='subtitle'>Make our Customers Happy.</span></h3>
-                    <p>Porro repellat vero sapiente amet vitae quibusdam necessitatibus consectetur, labore totam. Accusamus perspiciatis asperiores labore esse ab accusantium ea modi ut.</p>
+                    <h3>Phương châm.<span className='subtitle'>Mỗi bữa ăn là một tác phẩm tuyệt vời.</span></h3>
+                    <p>Một bữa ăn không chỉ đơn thuần là thưởng thức món ngon, nó còn là sự trải nghiệm và tận hưởng.</p>
                   </div>
                 </div>
               </div>
@@ -61,16 +61,13 @@ class Homepage extends Component {
 
             </div>
 
-            <div className='section dark bottommargin-lg' style={{ 'height': '500px' }}>
+            <div className='section dark bottommargin-lg' style={{ 'height': '340px', 'paddingTop': '30px' }}>
               <div className='container center clearfix vertical-middle'>
-
                 <i className='i-plain i-xlarge icon-food2 divcenter bottommargin' />
-
                 <div className='slider-caption slider-caption-center'>
-                  <h2 data-animate='fadeInUp'>Brilliant Service</h2>
-                  <p data-animate='fadeInUp' data-delay='200'>'Momentum poverty tackling fellows social impact. Expanding community ownership, future affiliate protect civil society. Bloomberg.'</p>
+                  <h2 data-animate='fadeInUp'>Dịch vụ tốt nhất</h2>
+                  <p data-animate='fadeInUp' data-delay='200'>"Sự hài lòng của bạn là mục tiêu lớn nhất của chúng tôi"</p>
                 </div>
-
               </div>
             </div>
 
@@ -81,7 +78,7 @@ class Homepage extends Component {
                   <div className='fbox-icon'>
                     <a href='#'><img src={require('images/icons/restaurant/glass.png')} alt='Icon' data-animate='zoomIn' /></a>
                   </div>
-                  <h3>Exclusive Bar Available<span className='subtitle'>Start getting high</span></h3>
+                  <h3>Quầy bar 24/7<span className='subtitle'>Tận hưởng phút giây giải trí bất tận</span></h3>
                 </div>
               </div>
 
@@ -92,7 +89,7 @@ class Homepage extends Component {
                       <img src={require('images/icons/restaurant/fork.png')} alt='Icon' data-animate='zoomIn' data-delay='200' />
                     </a>
                   </div>
-                  <h3>International Food Menu<span className='subtitle'>World Famous Recipes</span></h3>
+                  <h3>Thực đơn đa dạng<span className='subtitle'>Các món ăn đến từ khắp nơi trên thế giới</span></h3>
                 </div>
               </div>
 
@@ -101,7 +98,7 @@ class Homepage extends Component {
                   <div className='fbox-icon'>
                     <a href='#'><img src={require('images/icons/restaurant/cup.png')} alt='Icon' data-animate='zoomIn' data-delay='400' /></a>
                   </div>
-                  <h3>Breakfast Available<span className='subtitle'>Specialized Morning Menus</span></h3>
+                  <h3>Takeaway<span className='subtitle'>Tiện lợi mọi lúc mọi nơi</span></h3>
                 </div>
               </div>
 
@@ -110,7 +107,7 @@ class Homepage extends Component {
                   <div className='fbox-icon'>
                     <a href='#'><img src={require('images/icons/restaurant/tea.png')} alt='Icon' data-animate='zoomIn' data-delay='600' /></a>
                   </div>
-                  <h3>Quiet Cafe Dining<span className='subtitle'>Private &amp; Personalized</span></h3>
+                  <h3>Không gian yên tĩnh<span className='subtitle'>Tận hưởng trọn vẹn bữa ăn trong không gian riêng của bạn</span></h3>
                 </div>
               </div>
 
@@ -129,16 +126,16 @@ class Homepage extends Component {
 
                 <div className='col_half nobottommargin col_last'>
 
-                  <div className='heading-block' style={{ 'paddingTop': '40px' }}>
+                  <div className='heading-block' style={{ 'paddingTop': '0px' }}>
 
-                    <h2>Fresh from the Garden.</h2>
-                    <span>Duis mollis, est non commodo luctus. Donec sed odio dui</span>
+                    <h2>Thực phẩm trực tiếp từ nông trại.</h2>
+                    <span>Hàng chục đối tác nông trại, đảm bảo an toàn nghiêm ngặt về thực phẩm sạch.</span>
 
                   </div>
 
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, repudiandae, maxime, earum, sapiente assumenda non odit laborum qui vero vel quos sint excepturi in laudantium.</p>
+                  <p>nông trại, nông trang là một khu vực đất đai có diện tích tương đối rộng lớn (có thể bao gồm cả hồ, sông, đầm, đìa, rạch...), nằm ở vùng đồng quê, dùng để sản xuất nông nghiệp như trồng lúa, ngũ cốc, làm ruộng.</p>
 
-                  <a href='#' className='button button-border button-large button-rounded topmargin-sm noleftmargin'>View Recipes</a>
+                  <a href='#' className='button button-border button-large button-rounded topmargin-sm noleftmargin'>Chi tiết</a>
 
                 </div>
 
@@ -149,26 +146,16 @@ class Homepage extends Component {
               <div className='container clearfix'>
 
                 <div className='col_half nobottommargin'>
-
-                  <div className='heading-block' style={{ paddingTop: '40px' }}>
-
-                    <h2>You'll be Lovin' It.</h2>
-                    <span>Duis mollis, est non commodo luctus. Donec sed odio dui</span>
-
+                  <div className='heading-block' style={{ paddingTop: '0px' }}>
+                    <h2>Đa dạng đến từng chi tiết.</h2>
+                    <span>Ở BK Food, mọi thứ đều có thể được tùy chỉnh theo ý của bạn.</span>
                   </div>
-
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, repudiandae, maxime, earum, sapiente assumenda non odit laborum qui vero vel quos sint excepturi in laudantium.</p>
-
-                  <a href='#' className='button button-border button-large button-rounded topmargin-sm noleftmargin'>More Details</a>
-
+                  <p>Bạn đang có thực đơn ăn kiêng, ăn chay hoặc có những thói quen ăn uống đặc biệt? Tất cả đều được đáp ứng ở BK Food.</p>
+                  <a href='#' className='button button-border button-large button-rounded topmargin-sm noleftmargin'>Chi tiết</a>
                 </div>
-
                 <div className='col_half bottommargin-sm center col_last'>
-
                   <img src={require('images/restaurant/22.png')} alt='Image' data-animate='fadeInRight' />
-
                 </div>
-
               </div>
             </div>
 
@@ -177,15 +164,14 @@ class Homepage extends Component {
               <div className='col_one_fourth nobottommargin'>
 
                 <div className='fancy-title title-border'>
-                  <h4>Opening Hours</h4>
+                  <h4>Giờ mở cửa</h4>
                 </div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aspernatur facilis cumque amet suscipit odio.</p>
+                <p>Ngoài quầy bar phục vụ 24/7, nhà hàng sẽ mở cửa giờ cụ thể ở dưới.</p>
 
-                <ul className='iconlist nobottommargin'>
-                  <li><i className='icon-time color' /> <strong>Mondays-Fridays:</strong> 10AM to 7PM</li>
-                  <li><i className='icon-time color' /> <strong>Saturdays:</strong> 11AM to 3PM</li>
-                  <li><i className='icon-time text-danger' /> <strong>Sundays:</strong> Closed</li>
+                <ul className='iconlist nobottommargin' style={{marginTop: '20px'}}>
+                  <li><i className='icon-time color' /> <strong>Thứ 2 - Thứ 6:</strong> 10AM to 11PM</li>
+                  <li><i className='icon-time color' /> <strong>Thứ 7 - CN:</strong> 7AM to 11PM</li>
                 </ul>
 
               </div>
@@ -193,19 +179,19 @@ class Homepage extends Component {
               <div className='col_one_fourth nobottommargin'>
 
                 <div className='fancy-title title-border'>
-                  <h4>Our Buffet Menu</h4>
+                  <h4>Trang thực đơn tham khảo</h4>
                 </div>
 
-                <p>Our Buffet Menu is unique &amp; filling consisting of different types of 5 Starters, 12 Full-Course Dishes, 9 Desserts &amp; 3 Mocktails which you are gonna relish to the core.</p>
+                <p>Ghé thăm trang thực đơn ngay để có được sự lựa chọn hấp dẫn nhất bạn nhé!</p>
 
-                <a href='#' className='button button-rounded button-dark noleftmargin'><i className='icon-file-alt' /> Browse Menu</a>
+                <a href='#' className='button button-rounded button-dark noleftmargin'><i className='icon-file-alt' /> Xem thực đơn</a>
 
               </div>
 
               <div className='col_half nobottommargin col_last'>
 
                 <div className='fancy-title title-border'>
-                  <h4>Gallery</h4>
+                  <h4>Hình ảnh</h4>
                 </div>
 
                 <div className='masonry-thumbs col-4 clearfix' data-lightbox='gallery' style={{ 'width': '100.3%' }}>
@@ -228,7 +214,7 @@ class Homepage extends Component {
                 <div className='col_three_fifth nobottommargin'>
 
                   <div className='heading-block nobottomborder'>
-                    <h3>Reviews</h3>
+                    <h3>Phản hồi</h3>
                   </div>
 
                   <div className='fslider restaurant-reviews' data-arrows='false' data-animation='slide'>
