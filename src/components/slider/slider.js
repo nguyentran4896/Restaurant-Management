@@ -75,7 +75,7 @@ class Slider extends Component {
 
                 <div className='tp-caption ltl tp-resizeme revo-slider-caps-text uppercase'
                   data-x='0'
-                  data-y='115'
+                  data-y='65'
                   data-transform_in='x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;'
                   data-speed='800'
                   data-start='1000'

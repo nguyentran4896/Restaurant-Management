@@ -5,7 +5,6 @@ import { findDOMNode } from 'react-dom'
 import EmptyCart from './cart/empty-cart/EmptyCart'
 import CartScrollBar from './cart/CartScrollBar'
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup'
-import 'stylesheets/header.min.css'
 
 class Header extends Component {
   constructor (props) {
@@ -93,20 +92,20 @@ class Header extends Component {
           <div className='container clearfix'>
             <div id='primary-menu-trigger'><i className='icon-reorder' /></div>
             <div id='logo'>
-              <a href='#' className='standard-logo' data-dark-logo={require('images/logo-resto.png')}>
+              <Link to='/' className='standard-logo' data-dark-logo={require('images/logo-resto.png')}>
                 <img src={require('images/logo-resto.png')} alt='Canvas Logo' />
-              </a>
-              <a href='#' className='retina-logo' data-dark-logo={require('images/logo-resto.png')}>
+              </Link>
+              <Link to='/' className='retina-logo' data-dark-logo={require('images/logo-resto.png')}>
                 <img src={require('images/logo@2x.png')} alt='Canvas Logo' />
-              </a>
+              </Link>
             </div>
 
             <nav id='primary-menu' className='style-5'>
               <ul className='norightborder norightpadding norightmargin'>
-                <li className='current'>
+                {/* <li className='current'>
                   <Link to='/'><div><i className='fa fa-cutlery' aria-hidden='true' />Trang chủ</div></Link>
-                </li>
-                <li><Link to='/menu'><div><i className='fa fa-navicon' aria-hidden='true' />Thực đơn</div></Link></li>
+                </li> */}
+                <li><Link to='/menu'><div><i className='fa fa-cutlery' aria-hidden='true' />Thực đơn</div></Link></li>
                 <li><Link to='/events'><div><i className='fa fa-shopping-cart' aria-hidden='true' />Khuyến mãi</div></Link></li>
                 <li><Link to='/table-board'><div><i className='fa fa-cogs' aria-hidden='true' />Sơ đồ bàn ăn</div></Link></li>
                 <li><Link to='/feedback'><div><i className='icon-pencil2' />Feedback</div></Link></li>
