@@ -2,7 +2,7 @@ import React, {
   Component
 } from 'react'
 
-import 'stylesheets/table-board.min.css'
+import 'stylesheets/table-board.css'
 
 import Interactive from 'components/interact/interact.js'
 
@@ -26,29 +26,49 @@ const draggableOptions = {
 }
 
 const avatarStyle = {
-  backgroundImage: 'url(' + require('images/table-8-chairs.jpg') + ')'
+  backgroundImage: 'url(' + require('images/table-8-chairs.png') + ')'
 }
 
-function example (tableName) {
-  return (
-    <div>
-      <Interactive draggable draggableOptions={draggableOptions}>
-        <div style={avatarStyle} className='table-wrapper'>
-          <input className='table-number' readOnly value={tableName} />
+const contentBackground = {
+  backgroundImage: 'url(' + require('images/background.jpg') + ')',
+  padding: '10px'
+}
+
+const generateTable = (tableName, status) => {
+  if (status === 'Đã đặt') {
+    return (
+      <Interactive draggableOptions={draggableOptions}>
+        <div to='' style={avatarStyle} className='table-wrapper'>
+          <input className='table-number' readOnly value={tableName} style={{ color: 'black' }} />
+          <select className='table-number' style={{ background: 'red', color: 'white', height: '30px' }} >
+            <option>Đã đặt</option>
+          </select>
         </div>
       </Interactive>
-    </div>
-  )
+    )
+  } else {
+    return (
+      <Interactive draggableOptions={draggableOptions}>
+        <div style={avatarStyle} className='table-wrapper'>
+          <input className='table-number' readOnly value={tableName} style={{ color: 'black' }} />
+          <select className='table-number' style={{ background: 'green', color: 'white', height: '30px' }} >
+            <option>Còn trống</option>
+            <option>Đặt bàn</option>
+          </select>
+        </div>
+      </Interactive>
+    )
+  }
 }
 
 class TableBoard extends Component {
   render () {
     return (
-      <div className='container-fluid table-container'>
-        {example('Bàn 1')}
-        {example('Bàn 2')}
-        {example('Bàn 3')}
-        {example('Bàn 4')}
+      <div className='container-fluid table-container' style={contentBackground}>
+        {generateTable('Bàn 1', 'Đã đặt')}
+        {generateTable('Bàn 2', 'Còn trống')}
+        {generateTable('Bàn 3', 'Đã đặt')}
+        {generateTable('Bàn 4', 'Còn trống')}       
       </div>
     )
   }

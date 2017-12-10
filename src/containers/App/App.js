@@ -8,6 +8,7 @@ import Header from 'components/header/header'
 // import Slider from 'components/slider/slider'
 import Homepage from 'components/pages/homepage/homepage'
 import Menu from 'components/pages/menu/menu'
+import FoodDetail from 'components/pages/menu/food-detail'
 import Events from 'components/pages/events/events'
 import TableBoard from 'components/pages/table-board/table-board'
 import Auth from 'components/pages/auth/auth'
@@ -79,6 +80,7 @@ class App extends Component {
               <Route exact path='/auth' component={Auth} />
               <Route exact path='/feedback' component={Feedback} />
               <Route exact path='/order-detail' component={OrderDetail} />
+              <Route exact path='/food-detail' component={FoodDetail} />
             </div>
           </div>
         </div>

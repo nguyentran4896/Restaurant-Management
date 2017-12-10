@@ -41,7 +41,6 @@ class Header extends Component {
   }
   handleClickOutside (event) {
     const cartNode = findDOMNode(this.refs.cartPreview)
-    const buttonNode = findDOMNode(this.refs.cartButton)
     if (cartNode.classList.contains('active')) {
       if (!cartNode || !cartNode.contains(event.target)) {
         this.setState({
@@ -105,7 +104,98 @@ class Header extends Component {
                 {/* <li className='current'>
                   <Link to='/'><div><i className='fa fa-cutlery' aria-hidden='true' />Trang chủ</div></Link>
                 </li> */}
-                <li><Link to='/menu'><div><i className='fa fa-cutlery' aria-hidden='true' />Thực đơn</div></Link></li>
+                <li>
+                  <Link to='/menu'>
+                    <div>
+                      <i className='fa fa-cutlery' aria-hidden='true' />
+                      Thực đơn
+                    </div>
+                  </Link>
+                  <ul>
+                    <li>
+                      <Link to='/menu'>
+                        <div>
+                          <i class='fa fa-cutlery' />
+                          Lẫu
+                        </div>
+                      </Link>
+                      <ul>
+                        <li>
+                          <Link to='/menu'><div>Lẫu hải sản</div></Link>
+                        </li>
+                        <li>
+                          <Link to='/menu'><div>Lẫu bò</div></Link>
+                        </li>
+                        <li>
+                          <Link to='/menu'><div>Lẫu Cá lóc</div></Link>
+                        </li>
+                        <li>
+                          <Link to='/menu'><div>Lẫu Nấm</div></Link>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <Link to='/menu'>
+                        <div>
+                          <i class='fa fa-cutlery' />
+                          Các Món Nướng BBQ
+                        </div>
+                      </Link>
+                      <ul>
+                        <li>
+                          <Link to='/menu'><div>Bò nướng</div></Link>
+                        </li>
+                        <li>
+                          <Link to='/menu'><div>Dê nướng</div></Link>
+                        </li>
+                        <li>
+                          <Link to='/menu'><div>Tôm nướng</div></Link>
+                        </li>
+                        <li>
+                          <Link to='/menu'><div>Mực nướng</div></Link>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <Link to='/menu'>
+                        <div>
+                          <i class='fa fa-cutlery' />
+                          Các Món Cơm
+                        </div>
+                      </Link>
+                      <ul>
+                        <li>
+                          <Link to='/menu'><div>Cơm chiên hải sản</div></Link>
+                        </li>
+                        <li>
+                          <Link to='/menu'><div>Cơm nêu</div></Link>
+                        </li>
+                        <li>
+                          <Link to='/menu'><div>Cơm chiên dương châu</div></Link>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <Link to='/menu'>
+                        <div>
+                          <i class='fa fa-cutlery' />
+                          Các món canh
+                        </div>
+                      </Link>
+                      <ul>
+                        <li>
+                          <Link to='/menu'><div>Canh chua cá lóc</div></Link>
+                        </li>
+                        <li>
+                          <Link to='/menu'><div>Canh rau</div></Link>
+                        </li>
+                        <li>
+                          <Link to='/menu'><div>Canh lá giang</div></Link>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
                 <li><Link to='/events'><div><i className='fa fa-shopping-cart' aria-hidden='true' />Khuyến mãi</div></Link></li>
                 <li><Link to='/table-board'><div><i className='fa fa-cogs' aria-hidden='true' />Sơ đồ bàn ăn</div></Link></li>
                 <li><Link to='/feedback'><div><i className='icon-pencil2' />Feedback</div></Link></li>
@@ -122,10 +212,10 @@ class Header extends Component {
                     placeholder='Gõ &amp; nhấn Enter..' onChange={this.props.handleSearch} />
                 </form>
 
-                {/* <form action="#" method="get" className={this.state.mobileSearch ? "search-form active" : "search-form"}>
-                  <a className="back-button" href="#" onClick={this.handleSearchNav.bind(this)}><img src="https://res.cloudinary.com/sivadass/image/upload/v1494756030/icons/back.png" alt="back"/></a>
-                  <input type="search" ref="searchBox" placeholder="Search for Vegetables and Fruits" className="search-keyword" onChange={this.props.handleSearch}/>
-                  <button className="search-button" type="submit" onClick={this.handleSubmit.bind(this)}></button>
+                {/* <form action='#' method='get' className={this.state.mobileSearch ? 'search-form active' : 'search-form'}>
+                  <a className='back-button' href='#' onClick={this.handleSearchNav.bind(this)}><img src='https://res.cloudinary.com/sivadass/image/upload/v1494756030/icons/back.png' alt='back'/></a>
+                  <input type='search' ref='searchBox' placeholder='Search for Vegetables and Fruits' className='search-keyword' onChange={this.props.handleSearch}/>
+                  <button className='search-button' type='submit' onClick={this.handleSubmit.bind(this)}></button>
                 </form> */}
               </div>
 

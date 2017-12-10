@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Counter from './Counter'
+import { Link } from 'react-router-dom'
 
 class Product extends Component {
   constructor (props) {
@@ -55,10 +56,11 @@ class Product extends Component {
           <img src={image} alt={this.props.name} onClick={this.quickView.bind(this, image, name, price, id, quantity)} />
         </div>
         <div className='container-fluid name-price-wrapper'>
-          <h4 className='product-name pull-left'>{this.props.name}</h4>
+          <Link to='/food-detail'>
+            <h4 className='product-name pull-left'>{this.props.name}</h4>
+          </Link>
           <p className='product-price pull-right'>{this.props.price}</p>
         </div>
-
         <Counter productQuantity={quantity} updateQuantity={this.props.updateQuantity} />
         <div className='product-action'>
           <button type='button' onClick={this.addToCart.bind(this, image, name, price, id, quantity)}>{this.state.buttonLabel}</button>
