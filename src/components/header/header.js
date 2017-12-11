@@ -12,7 +12,8 @@ class Header extends Component {
     this.state = {
       showCart: false,
       cart: this.props.cartItems,
-      mobileSearch: false
+      mobileSearch: false,
+      isLogging: false
     }
   }
   handleCart (e) {
@@ -115,7 +116,7 @@ class Header extends Component {
                     <li>
                       <Link to='/menu'>
                         <div>
-                          <i class='fa fa-cutlery' />
+                          <i className='fa fa-cutlery' />
                           Lẫu
                         </div>
                       </Link>
@@ -137,7 +138,7 @@ class Header extends Component {
                     <li>
                       <Link to='/menu'>
                         <div>
-                          <i class='fa fa-cutlery' />
+                          <i className='fa fa-cutlery' />
                           Các Món Nướng BBQ
                         </div>
                       </Link>
@@ -159,7 +160,7 @@ class Header extends Component {
                     <li>
                       <Link to='/menu'>
                         <div>
-                          <i class='fa fa-cutlery' />
+                          <i className='fa fa-cutlery' />
                           Các Món Cơm
                         </div>
                       </Link>
@@ -178,7 +179,7 @@ class Header extends Component {
                     <li>
                       <Link to='/menu'>
                         <div>
-                          <i class='fa fa-cutlery' />
+                          <i className='fa fa-cutlery' />
                           Các món canh
                         </div>
                       </Link>
@@ -200,6 +201,7 @@ class Header extends Component {
                 <li><Link to='/table-board'><div><i className='fa fa-cogs' aria-hidden='true' />Sơ đồ bàn ăn</div></Link></li>
                 <li><Link to='/feedback'><div><i className='icon-pencil2' />Feedback</div></Link></li>
                 <li><Link to='/auth'><div><i className='fa fa-lock' aria-hidden='true' />Đăng ký/Đăng nhập</div></Link></li>
+                <li><Link to='/profile'><div><i className='fa fa-user' aria-hidden='true' />Trang của tôi</div></Link></li>
               </ul>
 
               <div id='top-search'>
@@ -207,7 +209,7 @@ class Header extends Component {
                   <i className='icon-search3' />
                   <i className='icon-line-cross' />
                 </a>
-                <form action='#' method='get'>
+                <form>
                   <input type='search' name='q' ref='searchBox' className='form-control search-keyword' defaultValue=''
                     placeholder='Gõ &amp; nhấn Enter..' onChange={this.props.handleSearch} />
                 </form>

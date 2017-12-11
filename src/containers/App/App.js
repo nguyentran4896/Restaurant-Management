@@ -14,6 +14,7 @@ import TableBoard from 'components/pages/table-board/table-board'
 import Auth from 'components/pages/auth/auth'
 import Feedback from 'components/pages/feedback/feedback'
 import OrderDetail from 'components/pages/order-detail'
+import Profile from 'components/pages/profile'
 
 // includes
 import 'stylesheets/App.min.css'
@@ -81,6 +82,7 @@ class App extends Component {
               <Route exact path='/feedback' component={Feedback} />
               <Route exact path='/order-detail' component={OrderDetail} />
               <Route exact path='/food-detail' component={FoodDetail} />
+              <Route exact path='/profile' component={Profile} />
             </div>
           </div>
         </div>
