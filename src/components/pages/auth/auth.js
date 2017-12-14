@@ -1,9 +1,28 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import cookie from 'react-cookies'
 
 import 'stylesheets/auth.min.css'
 
 class Auth extends Component {
+  constructor () {
+    super()
+    this.state = {
+      isLogging: cookie.load('isLogging')
+    }
+    this.onLogin = this.onLogin.bind(this)
+  }
+
+  onLogin () {
+    this.setState({ isLogging: true })
+    cookie.save('isLogging', true, { path: '/' })
+    this.props.history.push('/')
+    window.location.reload()
+  }
+
+  componentWillMount () {
+    this.setState({userId: cookie.load('userId')})
+  }
   render () {
     return (
       <section id='content'>
@@ -16,7 +35,7 @@ class Auth extends Component {
 
               <div className='acctitle'><i className='acc-closed icon-lock3' /><i className='acc-open icon-unlock' />Đăng nhập</div>
               <div className='acc_content clearfix'>
-                <form id='login-form' name='login-form' className='nobottommargin' action='#' method='post'>
+                <form id='login-form' name='login-form' className='nobottommargin'>
                   <div className='col_full'>
                     <label htmlFor='login-form-username'>Tài khoản:</label>
                     <input type='text' id='login-form-username' name='login-form-username' defaultValue='' className='form-control' />
@@ -28,7 +47,7 @@ class Auth extends Component {
                   </div>
 
                   <div className='col_full nobottommargin'>
-                    <button className='button button-3d button-black nomargin' id='login-form-submit' name='login-form-submit' defaultValue='login'>Đăng nhập</button>
+                    <button onClick={this.onLogin} className='button button-3d button-black nomargin' id='login-form-submit' name='login-form-submit' defaultValue='login'>Đăng nhập</button>
                     <a href='#' className='fright'>Quên mật khẩu?</a>
                   </div>
                 </form>

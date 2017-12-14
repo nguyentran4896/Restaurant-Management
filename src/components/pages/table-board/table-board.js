@@ -2,7 +2,7 @@ import React, {
   Component
 } from 'react'
 
-import 'stylesheets/table-board.css'
+import 'stylesheets/table-board.min.css'
 
 import Interactive from 'components/interact/interact.js'
 

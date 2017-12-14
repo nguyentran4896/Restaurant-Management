@@ -5,6 +5,7 @@ import { findDOMNode } from 'react-dom'
 import EmptyCart from './cart/empty-cart/EmptyCart'
 import CartScrollBar from './cart/CartScrollBar'
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup'
+import cookie from 'react-cookies'
 
 class Header extends Component {
   constructor (props) {
@@ -13,9 +14,23 @@ class Header extends Component {
       showCart: false,
       cart: this.props.cartItems,
       mobileSearch: false,
-      isLogging: false
+      isLogging: cookie.load('isLogging')
     }
+    this.onLogout = this.onLogout.bind(this)
   }
+
+  onLogout () {
+    cookie.remove('isLogging', { path: '/' })
+    window.location.reload()
+  }
+
+  handleLogin () {
+    let expires = new Date()
+    expires.setDate(expires.getDate() + 14)
+
+    cookie.save('userId', {path: '/'})
+  }
+
   handleCart (e) {
     e.preventDefault()
     this.setState({
@@ -63,6 +78,8 @@ class Header extends Component {
   }
 
   render () {
+    console.log(this.state.isLogging)
+    // const { userId } = this.state.userId
     let cartItems
     cartItems = this.state.cart.map(product => {
       return (
@@ -200,8 +217,20 @@ class Header extends Component {
                 <li><Link to='/events'><div><i className='fa fa-shopping-cart' aria-hidden='true' />Khuyến mãi</div></Link></li>
                 <li><Link to='/table-board'><div><i className='fa fa-cogs' aria-hidden='true' />Sơ đồ bàn ăn</div></Link></li>
                 <li><Link to='/feedback'><div><i className='icon-pencil2' />Feedback</div></Link></li>
-                <li><Link to='/auth'><div><i className='fa fa-lock' aria-hidden='true' />Đăng ký/Đăng nhập</div></Link></li>
-                <li><Link to='/profile'><div><i className='fa fa-user' aria-hidden='true' />Trang của tôi</div></Link></li>
+                <li className={this.state.isLogging ? 'hidden' : ''}><Link to='/auth'><div><i className='fa fa-lock' aria-hidden='true' />Đăng ký/Đăng nhập</div></Link></li>
+                <li className={!this.state.isLogging ? 'hidden' : ''}>
+                  <Link to='/profile'><div><i className='fa fa-user' aria-hidden='true' />Trang của tôi</div></Link>
+                  <ul>
+                    <li>
+                      <a href='#' onClick={this.onLogout}>
+                        <div>
+                          <i className='fa fa-sign-out' />
+                          Đăng xuất
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
               </ul>
 
               <div id='top-search'>
