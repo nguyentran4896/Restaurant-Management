@@ -14,6 +14,7 @@ import TableBoard from 'components/pages/table-board/table-board'
 import Auth from 'components/pages/auth/auth'
 import Feedback from 'components/pages/feedback/feedback'
 import OrderDetail from 'components/pages/order-detail'
+import OrderDetailHistory from 'components/pages/order-detail-history'
 import Profile from 'components/pages/profile'
 
 // includes
@@ -83,6 +84,7 @@ class App extends Component {
               <Route exact path='/order-detail' component={OrderDetail} />
               <Route exact path='/food-detail' component={FoodDetail} />
               <Route exact path='/profile' component={Profile} />
+              <Route exact path='/order-detail-history' component={OrderDetailHistory} />
             </div>
           </div>
         </div>

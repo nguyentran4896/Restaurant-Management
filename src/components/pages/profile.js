@@ -53,23 +53,23 @@ class Profile extends Component {
                               <tbody>
                                 <tr>
                                   <td>
-                                    <Link to='/order-detail'><code>15/03/2017</code></Link>
+                                    <Link to='/order-detail-history'><code>15/03/2017</code></Link>
                                   </td>
                                   <td>
-                                    <Link to='/order-detail'><code>19:20 - 21:00</code></Link>
+                                    <Link to='/order-detail-history'><code>19:20 - 21:00</code></Link>
                                   </td>
-                                  <td><Link to='/order-detail'><code>17</code></Link></td>
-                                  <td><Link to='/order-detail'><code>245.000 VND</code></Link></td>
+                                  <td><Link to='/order-detail-history'><code>17</code></Link></td>
+                                  <td><Link to='/order-detail-history'><code>245.000 VND</code></Link></td>
                                 </tr>
                                 <tr>
                                   <td>
-                                    <Link to='/order-detail'><code>05/03/2017</code></Link>
+                                    <Link to='/order-detail-history'><code>05/03/2017</code></Link>
                                   </td>
                                   <td>
-                                    <Link to='/order-detail'><code>18:20 - 19:10</code></Link>
+                                    <Link to='/order-detail-history'><code>18:20 - 19:10</code></Link>
                                   </td>
-                                  <td><Link to='/order-detail'><code>17</code></Link></td>
-                                  <td><Link to='/order-detail'><code>475.000 VND</code></Link></td>
+                                  <td><Link to='/order-detail-history'><code>17</code></Link></td>
+                                  <td><Link to='/order-detail-history'><code>475.000 VND</code></Link></td>
                                 </tr>
                               </tbody>
                             </table>
