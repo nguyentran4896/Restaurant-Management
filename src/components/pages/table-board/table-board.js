@@ -68,7 +68,7 @@ class TableBoard extends Component {
         {generateTable('Bàn 1', 'Đã đặt')}
         {generateTable('Bàn 2', 'Còn trống')}
         {generateTable('Bàn 3', 'Đã đặt')}
-        {generateTable('Bàn 4', 'Còn trống')}       
+        {generateTable('Bàn 4', 'Còn trống')}
       </div>
     )
   }

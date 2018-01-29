@@ -11,7 +11,6 @@ class Products extends Component {
   render () {
     let productsData
     let term = this.props.searchTerm
-    let x
 
     function searchingFor (term) {
       return function (x) {
