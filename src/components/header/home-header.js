@@ -27,15 +27,10 @@ class Header extends Component {
             <a href='#' className='navicon' />
             <div className='toggle'>
               <ul className='toggle-menu'>
-                <li>
-                  <Link to='/' className='active'>Home</Link>
-                </li>
-                <li>
-                  <Link to='/menu'>Menu</Link>
-                </li>
-                <li>
-                  <Link to='event'>Events</Link>
-                </li>
+                <li><Link to='/' className='active'>Home</Link></li>
+                <li><Link to='/menu'>Menu</Link></li>
+                <li><Link to='/event'>Events</Link></li>
+                <li><Link to='/contact'>Contact</Link></li>
               </ul>
             </div>
           </div>

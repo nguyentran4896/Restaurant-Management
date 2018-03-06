@@ -14,6 +14,7 @@ import Footer from 'components/footer/footer.js'
 import Homepage from 'components/pages/home.js'
 import Menu from 'components/pages/menu.js'
 import Event from 'components/pages/event.js'
+import Contact from 'components/pages/contact.js'
 
 class App extends Component {
   componentDidMount () {
@@ -36,6 +37,7 @@ class App extends Component {
           <Route exact path='/' component={Homepage} />
           <Route exact path='/menu' component={Menu} />
           <Route exact path='/event' component={Event} />
+          <Route exact path='/contact' component={Contact} />
           <Footer />
         </div>
       </Router>
