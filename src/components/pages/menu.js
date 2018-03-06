@@ -20,7 +20,7 @@ class Header extends Component {
             <div className='col-md-4 menu-bottom1'>
               <div className='btm-right'>
                 <a href='events.html'>
-                  <img src='images/me.jpg' alt='' className='img-responsive' />
+                  <img src='/lib/images/me.jpg' alt='' className='img-responsive' />
                   <div className='captn'>
                     <h4>Lorem</h4>
                     <p>$20.00</p>
@@ -31,7 +31,7 @@ class Header extends Component {
             <div className='col-md-4 menu-bottom1'>
               <div className='btm-right'>
                 <a href='events.html'>
-                  <img src='images/me1.jpg' alt='' className='img-responsive' />
+                  <img src='/lib/images/me1.jpg' alt='' className='img-responsive' />
                   <div className='captn'>
                     <h4>Lorem</h4>
                     <p>$20.00</p>
@@ -42,7 +42,7 @@ class Header extends Component {
             <div className='col-md-4 menu-bottom1'>
               <div className='btm-right'>
                 <a href='events.html'>
-                  <img src='images/me2.jpg' alt='' className='img-responsive' />
+                  <img src='/lib/images/me2.jpg' alt='' className='img-responsive' />
                   <div className='captn'>
                     <h4>Lorem</h4>
                     <p>$20.00</p>
@@ -56,7 +56,7 @@ class Header extends Component {
             <div className='col-md-4 menu-bottom1'>
               <div className='btm-right'>
                 <a href='events.html'>
-                  <img src='images/me3.jpg' alt='' className='img-responsive' />
+                  <img src='/lib/images/me3.jpg' alt='' className='img-responsive' />
                   <div className='captn'>
                     <h4>Lorem</h4>
                     <p>$20.00</p>
@@ -67,7 +67,7 @@ class Header extends Component {
             <div className='col-md-4 menu-bottom1'>
               <div className='btm-right'>
                 <a href='events.html'>
-                  <img src='images/me4.jpg' alt='' className='img-responsive' />
+                  <img src='/lib/images/me4.jpg' alt='' className='img-responsive' />
                   <div className='captn'>
                     <h4>Lorem</h4>
                     <p>$20.00</p>
@@ -78,7 +78,7 @@ class Header extends Component {
             <div className='col-md-4 menu-bottom1'>
               <div className='btm-right'>
                 <a href='events.html'>
-                  <img src='images/me5.jpg' alt='' className='img-responsive' />
+                  <img src='/lib/images/me5.jpg' alt='' className='img-responsive' />
                   <div className='captn'>
                     <h4>Lorem</h4>
                     <p>$20.00</p>
@@ -92,7 +92,7 @@ class Header extends Component {
             <div className='col-md-4 menu-bottom1'>
               <div className='btm-right'>
                 <a href='events.html'>
-                  <img src='images/me6.jpg' alt='' className='img-responsive' />
+                  <img src='/lib/images/me6.jpg' alt='' className='img-responsive' />
                   <div className='captn'>
                     <h4>Lorem</h4>
                     <p>$20.00</p>
@@ -103,7 +103,7 @@ class Header extends Component {
             <div className='col-md-4 menu-bottom1'>
               <div className='btm-right'>
                 <a href='events.html'>
-                  <img src='images/me7.jpg' alt='' className='img-responsive' />
+                  <img src='/lib/images/me7.jpg' alt='' className='img-responsive' />
                   <div className='captn'>
                     <h4>Lorem</h4>
                     <p>$20.00</p>
@@ -114,7 +114,7 @@ class Header extends Component {
             <div className='col-md-4 menu-bottom1'>
               <div className='btm-right'>
                 <a href='events.html'>
-                  <img src='images/me8.jpg' alt='' className='img-responsive' />
+                  <img src='/lib/images/me8.jpg' alt='' className='img-responsive' />
                   <div className='captn'>
                     <h4>Lorem</h4>
                     <p>$20.00</p>

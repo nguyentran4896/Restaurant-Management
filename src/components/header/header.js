@@ -24,9 +24,7 @@ class Header extends Component {
               <ul className='toggle-menu'>
                 <li><Link to='/'>Home</Link></li>
                 <li><Link to='/menu'>Menu</Link></li>
-                <li><a href='typo.html'>Codes</a></li>
-                <li><a href='events.html'>Events</a></li>
-                <li><a href='contact.html'>Contact</a></li>
+                <li><Link to='/event'>Events</Link></li>
               </ul>
             </div>
           </div>
