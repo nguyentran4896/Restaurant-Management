@@ -3,19 +3,20 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom'
-// components
 
-// includes
-// import 'stylesheets/App.min.css'
+// components
+import Header from 'components/header/header.js'
+import Footer from 'components/footer/footer.js'
+import Homepage from 'components/pages/home.js'
 
 class App extends Component {
   render () {
     return (
       <Router>
         <div className='App'>
-          <div className='container-fluid no-padding'>
-            <div className='container-fluid no-padding' />
-          </div>
+          <Header />
+          <Route exact path='/' component={Homepage} />
+          <Footer />
         </div>
       </Router>
     )
