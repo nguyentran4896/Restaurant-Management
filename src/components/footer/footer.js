@@ -1,14 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import $ from 'jquery'
-
-// includes
-// import 'stylesheets/animate.min.css'
-// import 'stylesheets/style.css'
-
-// import 'stylesheets/bootstrap.css'
-// import 'stylesheets/component.css'
-// import 'stylesheets/styles.css'
 
 class Header extends Component {
   componentDidMount () {
