@@ -16,7 +16,14 @@ class Header extends Component {
       <div className='header head'>
         <div className='container'>
           <div className='logo animated wow pulse' data-wow-duration='1000ms' data-wow-delay='500ms'>
-            <h1><a href='index.html'><span>C</span><img src='/lib/images/oo.png' alt='' /><img src='/lib/images/oo.png' alt='' />kery</a></h1>
+            <h1>
+              <Link to='/'>
+                <span>C</span>
+                <img src='/lib/images/oo.png' alt='' />
+                <img src='/lib/images/oo.png' alt='' />
+                kery
+              </Link>
+            S</h1>
           </div>
           <div className='nav-icon'>
             <a href='#' className='navicon' />
