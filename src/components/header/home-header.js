@@ -20,10 +20,8 @@ class Header extends Component {
               <Link to='/'>
                 <span>C</span>
                 <img src='/lib/images/oo.png' alt='' />
-                <img src='/lib/images/oo.png' alt='' />
-                kery
-              </Link>
-            S</h1>
+                <img src='/lib/images/oo.png' alt='' />kery</Link>
+            </h1>
           </div>
           <div className='nav-icon'>
             <a href='#' className='navicon' />

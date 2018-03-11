@@ -35,6 +35,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   <!-- animation-effect -->
   <link href="/lib/css/animate.min.css" rel="stylesheet">
   <script src="/lib/js/wow.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
   <script>
     new WOW().init();
   </script>
@@ -43,15 +44,38 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 
 <body>
-  
+
 
   <div id="root"></div>
 
   <!--content-->
-  
-  <!--footer-->
 
-  <!--//footer-->
+  <script>
+    $(document).ready(function () {
+      $('#login-button').click(function () {
+        $('#login-button').fadeOut("slow", function () {
+          $("#container").fadeIn();
+          TweenMax.from("#container", .4, { scale: 0, ease: Sine.easeInOut });
+          TweenMax.to("#container", .4, { scale: 1, ease: Sine.easeInOut });
+        });
+      });
+
+      $(".close-btn").click(function () {
+        TweenMax.from("#container", .4, { scale: 1, ease: Sine.easeInOut });
+        TweenMax.to("#container", .4, { left: "0px", scale: 0, ease: Sine.easeInOut });
+        $("#container, #forgotten-container").fadeOut(800, function () {
+          $("#login-button").fadeIn(800);
+        });
+      });
+
+      /* Forgotten Password */
+      $('#forgotten').click(function () {
+        $("#container").fadeOut(function () {
+          $("#forgotten-container").fadeIn();
+        });
+      });
+    })
+  </script>
 </body>
 
 </html>
