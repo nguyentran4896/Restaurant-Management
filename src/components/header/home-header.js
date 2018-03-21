@@ -31,6 +31,7 @@ class Header extends Component {
                 <li><Link to='/menu'>Menu</Link></li>
                 <li><Link to='/event'>Events</Link></li>
                 <li><Link to='/contact'>Contact</Link></li>
+                <li><Link to='/auth'>Login</Link></li>
               </ul>
             </div>
           </div>
