@@ -53,3 +53,5 @@ typings/
 
 # build bundle
 build/
+
+package-lock.json
