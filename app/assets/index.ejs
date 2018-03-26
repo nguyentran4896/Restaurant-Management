@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Cookery A Food Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+  <link href="/lib/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="/lib/js/jquery.min.js"></script>
+  <!-- Custom Theme files -->
+  <!--theme-style-->
+  <link href="/lib/css/style.css" rel="stylesheet" type="text/css" media="all" />
+  <!--//theme-style-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="Cookery Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+  <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+  <!---->
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,200,100,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+  <!-- start-smoth-scrolling -->
+  <script type="text/javascript" src="js/move-top.js"></script>
+  <script type="text/javascript" src="js/easing.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function ($) {
+      $(".scroll").click(function (event) {
+        event.preventDefault();
+        $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+      });
+    });
+  </script>
+  <!-- start-smoth-scrolling -->
+  <link href="/lib/css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/lib/css/component.css" />
+  <!-- animation-effect -->
+  <link href="/lib/css/animate.min.css" rel="stylesheet">
+  <script src="/lib/js/wow.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+  <!-- //animation-effect -->
+
+</head>
+
+<body>
+
+
+  <div id="website"></div>
+
+  <!--content-->
+
+  <script>
+    $(document).ready(function () {
+      $('#login-button').click(function () {
+        $('#login-button').fadeOut("slow", function () {
+          $("#container").fadeIn();
+          TweenMax.from("#container", .4, { scale: 0, ease: Sine.easeInOut });
+          TweenMax.to("#container", .4, { scale: 1, ease: Sine.easeInOut });
+        });
+      });
+
+      $(".close-btn").click(function () {
+        TweenMax.from("#container", .4, { scale: 1, ease: Sine.easeInOut });
+        TweenMax.to("#container", .4, { left: "0px", scale: 0, ease: Sine.easeInOut });
+        $("#container, #forgotten-container").fadeOut(800, function () {
+          $("#login-button").fadeIn(800);
+        });
+      });
+
+      /* Forgotten Password */
+      $('#forgotten').click(function () {
+        $("#container").fadeOut(function () {
+          $("#forgotten-container").fadeIn();
+        });
+      });
+
+      $('.navicon').on('click', function (e) {
+        e.preventDefault()
+        $(this).toggleClass('navicon--active')
+        $('.toggle').toggleClass('toggle--active')
+      })
+    })
+  </script>
+</body>
+
+</html>
