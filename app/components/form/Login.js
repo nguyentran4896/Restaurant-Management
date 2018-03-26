@@ -20,7 +20,7 @@ const LoginForm = (props) => {
       <Field
         name='password'
         component={InputText}
-        label='Password'
+        label='Mật khẩu'
         type='password'
         required={true}
       />

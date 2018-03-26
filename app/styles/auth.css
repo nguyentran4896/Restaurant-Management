@@ -6,6 +6,8 @@
     background-size: cover;
     overflow: hidden;
     height: 80vh;
+    color: #ddd;
+    text-shadow: 3px 3px 10px #000;
 }
 
 .auth-page img {
@@ -44,11 +46,12 @@
     bottom: 0;
     margin: auto;
     width: 260px;
-    height: 260px;
+    height: 300px;
     border-radius: 5px;
     background: rgba(3, 3, 3, 0.25);
     box-shadow: 1px 1px 50px #000;
     display: none;
+    padding: 5px 0;
 }
 
 .auth-page .close-btn {
@@ -90,7 +93,8 @@
 /* Inputs */
 
 .auth-page a,
-.auth-page input {
+.auth-page input, .auth-page a,
+.auth-page button {
     font-family: 'Open Sans Condensed', sans-serif;
     text-decoration: none;
     position: relative;
@@ -221,11 +225,12 @@
     bottom: 0;
     margin: auto;
     width: 260px;
-    height: 180px;
+    height: 160px;
     border-radius: 10px;
     background: rgba(3, 3, 3, 0.25);
     box-shadow: 1px 1px 50px #000;
     display: none;
+    padding: 10px 0;
 }
 
 .auth-page .orange-btn {

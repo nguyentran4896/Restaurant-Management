@@ -19,7 +19,6 @@ export const submitLogin =
       if (body.code === 0) {
         admin = body.data
         dispatch(adminHasSignedIn(admin))
-        Navigator.push('dashboard')
       } else if (body.code === 416) {
         showNotification('topCenter', 'error', 'Mật khẩu không hợp lệ!')
       } else if (body.code === 414) {
