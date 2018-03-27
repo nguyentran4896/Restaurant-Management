@@ -1,5 +1,5 @@
 .auth-page {
-    background: url(http://cdn.magdeleine.co/wp-content/uploads/2014/05/3jPYgeVCTWCMqjtb7Dqi_IMG_8251-1400x933.jpg) no-repeat center center fixed;
+    background: url('/lib/images/restaurant-bg.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -31,7 +31,7 @@
     border-radius: 50%;
     background: rgba(3, 3, 3, .8);
     overflow: hidden;
-    opacity: 0.4;
+    opacity: 1;
     box-shadow: 10px 10px 30px #000;
 }
 
@@ -48,7 +48,7 @@
     width: 260px;
     height: 300px;
     border-radius: 5px;
-    background: rgba(3, 3, 3, 0.25);
+    background: rgba(3, 3, 3, 0.75);
     box-shadow: 1px 1px 50px #000;
     display: none;
     padding: 5px 0;
@@ -65,7 +65,7 @@
     height: 20px;
     text-align: center;
     border-radius: 10px;
-    opacity: .2;
+    opacity: .3;
     -webkit-transition: all 2s ease-in-out;
     -moz-transition: all 2s ease-in-out;
     -o-transition: all 2s ease-in-out;
@@ -73,7 +73,7 @@
 }
 
 .auth-page .close-btn:hover {
-    opacity: .5;
+    opacity: .7;
 }
 
 
@@ -227,7 +227,7 @@
     width: 260px;
     height: 160px;
     border-radius: 10px;
-    background: rgba(3, 3, 3, 0.25);
+    background: rgba(3, 3, 3, 0.75);
     box-shadow: 1px 1px 50px #000;
     display: none;
     padding: 10px 0;
