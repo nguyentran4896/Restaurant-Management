@@ -55,3 +55,4 @@ typings/
 build/
 
 package-lock.json
+.vscode/
