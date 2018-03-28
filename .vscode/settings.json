@@ -7,5 +7,6 @@
         }
     ],
     "liveSassCompile.settings.generateMap": false,
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "eslint.enable": true
 }

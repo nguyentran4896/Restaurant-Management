@@ -12,22 +12,21 @@ export const makeHeader = _ => {
     'Vid': ''
   }
 
-  const headerInfo = Store.getState().admin.data
-
-  if (headerInfo && headerInfo !== null) {
-    headers['Uid'] = headerInfo.uid
-    headers['Token'] = headerInfo.token
-    headers['Vid'] = headerInfo.vid
-  }
-
   headers['Authorization'] = md5(md5(headers['Token'] + headers['Uid'] + headers['Date-Time']))
   return headers
 }
 
-export const makeRequestOptions = (params, url) => ({
+export const makePostRequestOptions = (params, url) => ({
   method: 'POST',
-  uri: 'http://localhost:8000/v1/' + url,
+  uri: 'http://localhost:8000/website/v1/' + url,
   body: params,
+  headers: makeHeader(),
+  json: true
+})
+
+export const makeGetRequestOptions = (queries, url) => ({
+  method: 'GET',
+  uri: 'http://localhost:8000/website/v1/' + url + queries,
   headers: makeHeader(),
   json: true
 })
