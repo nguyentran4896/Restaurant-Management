@@ -6,7 +6,7 @@ import {
   FETCH_EMPLOYEES_TOTAL_PAGE
 } from '../lib/actions/employee'
 
-import { ADMIN_SIGNED_OUT } from 'ducks/admin'
+import { ADMIN_SIGNED_OUT } from 'ducks/user'
 
 const initialState = {
   items: [],

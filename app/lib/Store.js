@@ -39,7 +39,7 @@ const Store = create(rootReducers, initialState, applyMiddlewareConfig)
 const { dispatch } = Store
 
 // initialise public state
-dispatch(fetchNotifications())
+// dispatch(fetchNotifications())
 
 // Persist redux store in local storage
 persistStore(

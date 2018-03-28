@@ -2,7 +2,7 @@ import { SubmissionError } from 'redux-form'
 import request from 'request-promise'
 
 import { makeRequestOptions } from '../requestHeader'
-import { adminHasSignedIn } from 'ducks/admin'
+import { adminHasSignedIn } from 'ducks/user'
 import { showNotification } from './showNotification'
 import Navigator from 'lib/Navigator'
 // Redux-form requires a promise for async submission

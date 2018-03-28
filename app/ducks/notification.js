@@ -2,7 +2,6 @@ import {
   FETCH_NOTIFICATION_SUCCESS,
   NOTIFICATION_CHANGED
 } from '../lib/actions/notification'
-import { ADMIN_SIGNED_OUT } from 'ducks/admin'
 
 const initialState = {
   data: {},
@@ -32,8 +31,6 @@ const reducer = (state = initialState, action) => {
       }
     }
 
-    case ADMIN_SIGNED_OUT:
-      return {...initialState}
     default:
       return state
   }

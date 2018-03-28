@@ -1,10 +1,10 @@
 import {
-  FETCH_FOOD_CATEGORIES_BEGIN,
-  FETCH_FOOD_CATEGORIES_SUCCESS,
-  FETCH_FOOD_CATEGORIES_ERROR,
-  FETCH_FOOD_CATEGORIES_SORT_VALUE,
-  FETCH_FOOD_CATEGORIES_TOTAL_PAGE
-} from '../lib/actions/foodCategory'
+  FETCH_FOOD_BEGIN,
+  FETCH_FOOD_SUCCESS,
+  FETCH_FOOD_ERROR,
+  FETCH_FOOD_SORT_VALUE,
+  FETCH_FOOD_TOTAL_PAGE
+} from 'lib/actions/food'
 
 import { ADMIN_SIGNED_OUT } from 'ducks/user'
 
@@ -19,21 +19,21 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case FETCH_FOOD_CATEGORIES_BEGIN:
+    case FETCH_FOOD_BEGIN:
       return {
         ...state,
         loading: true,
         error: null
       }
 
-    case FETCH_FOOD_CATEGORIES_SUCCESS:
+    case FETCH_FOOD_SUCCESS:
       return {
         ...state,
         loading: false,
-        items: action.foodCategories
+        items: action.foods
       }
 
-    case FETCH_FOOD_CATEGORIES_ERROR:
+    case FETCH_FOOD_ERROR:
       return {
         ...state,
         loading: false,
@@ -41,14 +41,14 @@ const reducer = (state = initialState, action) => {
         items: []
       }
 
-    case FETCH_FOOD_CATEGORIES_SORT_VALUE:
+    case FETCH_FOOD_SORT_VALUE:
       return {
         ...state,
         sortBy: action.sortBy,
         sortType: action.sortType
       }
 
-    case FETCH_FOOD_CATEGORIES_TOTAL_PAGE:
+    case FETCH_FOOD_TOTAL_PAGE:
       return {
         ...state,
         totalPage: action.totalPage
