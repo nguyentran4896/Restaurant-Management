@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { getFoods } from 'lib/actions/food'
+import { getFoods, selectFood } from 'lib/actions/food'
 import FoodItem from 'components/pages/element/menu-item'
 
 class Menu extends Component {
-
   componentDidMount() {
     this.props.dispatch(getFoods())
   }
@@ -25,24 +24,22 @@ class Menu extends Component {
             </div>
             <div className='clearfix' />
           </div>
+
           <div className='menu-bottom animated wow fadeInUp' data-wow-duration='1000ms' data-wow-delay='500ms'>
 
-            {foodState.items.splice(0, 3).map((x, i) => <FoodItem food={x} key={i} />)}
+            {foodState.items.map((x, i) =>
+              <FoodItem
+                key={i} 
+                selectFood={selectFood} 
+                indexItem={i} 
+                foodState={foodState}
+                dispatch={dispatch} 
+                food={x} />
+            )}
 
             <div className='clearfix' />
           </div>
-          <div className='menu-bottom animated wow fadeInRight' data-wow-duration='1000ms' data-wow-delay='500ms'>
 
-            {foodState.items.splice(3, 3).map((x, i) => <FoodItem food={x} key={i} />)}
-
-            <div className='clearfix' />
-          </div>
-          <div className='menu-bottom animated wow fadeInDown' data-wow-duration='1000ms' data-wow-delay='500ms'>
-
-            {foodState.items.splice(6, 3).map((x, i) => <FoodItem food={x} key={i} />)}
-
-            <div className='clearfix' />
-          </div>
         </div>
       </div>
     )

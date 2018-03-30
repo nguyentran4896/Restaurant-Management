@@ -29,7 +29,6 @@ export const fetchFoodsError = error => ({
 })
 
 export const getFoods = params => dispatch => {
-  // return dispatch => {
   request(makeGetRequestOptions('?vendorId=1', 'foods')).then(body => {
     if (body.code === 401 || body.code === 400 || body.code === 414) {
       showNotification('topRight', 'error', 'Quá trình xác thực xảy ra lỗi!')
@@ -38,5 +37,9 @@ export const getFoods = params => dispatch => {
     }
   })
     .catch(err => dispatch(fetchFoodsError(err)))
-  // }
 }
+
+export const selectFood = (foodState, indexItem, dispatch) => {
+    foodState.items[indexItem]['isSelected'] = !foodState.items[indexItem]['isSelected'];
+    dispatch(fetchFoodsSuccess(foodState.items))
+  }

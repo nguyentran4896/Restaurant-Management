@@ -1171,8 +1171,9 @@ ul.start li span{
     -ms-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
-.btm-right:hover .captn {
+.btm-right:hover .captn, .btm-right .captn.active {
   bottom: 0%;
 }
 
@@ -1187,8 +1188,11 @@ ul.start li span{
     font-size:2em;
     color: #fff;
 }
-.btm-right:hover .captn h4 {
+.btm-right:hover .captn h4, .btm-right .captn.active h4 {
     margin-top: 90px;
+}
+.btm-right .captn.active img {
+    display: block!important;
 }
 .menu-bottom {
     margin-top: 2em;
@@ -1353,6 +1357,7 @@ p.footer-class {
     width: 33.3%;
     float: left;
     padding: 0 10px;
+    cursor: pointer;
 }
 .captn h4 {
     font-size: 1.6em;
