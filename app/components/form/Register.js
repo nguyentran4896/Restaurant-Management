@@ -3,7 +3,6 @@ import { Field } from 'redux-form'
 
 import InputText from 'components/form/element/InputText'
 import SubmitButton from 'components/form/element/SubmitButton'
-import { selectFieldData } from './datafield'
 // This form is pure so it is easy to test
 // Page/Register will decorate it with the necessary props
 const RegisterForm = (props) => {
