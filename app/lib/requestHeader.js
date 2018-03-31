@@ -9,7 +9,7 @@ export const makeHeader = _ => {
     'X-API-Language': 'en',
     'Uid': '',
     'Token': '',
-    'Vid': ''
+    'Vid': 123
   }
 
   const headerInfo = Store.getState().admin.data

@@ -232,7 +232,42 @@
     display: none;
     padding: 10px 0;
 }
+.auth-page #register {
+    position: absolute;
+    font-size: 12px;
+    font-family: 'Hind', sans-serif;
+    color: rgba(255, 255, 255, .2);
+    left: 0px;
+    top: 8px;
+    cursor: pointer;
+    -webkit-transition: all 2s ease-in-out;
+    -moz-transition: all 2s ease-in-out;
+    -o-transition: all 2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
 
+.auth-page #register:hover {
+    color: rgba(255, 255, 255, .6);
+}
+
+.auth-page #register-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 350px;
+    height: max-content;
+    border-radius: 10px;
+    background: rgba(3, 3, 3, 0.25);
+    box-shadow: 1px 1px 50px #000;
+    padding: 10px 0;
+    padding-left: 10px;
+}
+.auth-page #register-a{
+    background-color: none;
+}
 .auth-page .orange-btn {
     background: rgba(87, 198, 255, .5);
 }

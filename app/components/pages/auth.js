@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { reduxForm } from 'redux-form'
 import LoginForm from 'components/form/Login'
 import { submitLogin } from '../../lib/actions/submit'
-
 import 'styles/auth.css'
 
 class Auth extends Component {
@@ -21,6 +20,7 @@ class Auth extends Component {
           <div className='container-fluid'>
             <DecoratedLoginForm />
             <div id='remember-container'>
+              <a id = "register-a" href="/register" ><span  id='register'>Đăng ký </span></a>
               <span id='forgotten'>Quên mật khẩu</span>
             </div>
           </div>
@@ -47,5 +47,4 @@ const DecoratedLoginForm = reduxForm({
   form: 'login',
   onSubmit: submitLogin
 })(LoginForm)
-
 export default Auth

@@ -17,6 +17,7 @@ import Menu from 'components/pages/menu.js'
 import Event from 'components/pages/event.js'
 import Contact from 'components/pages/contact.js'
 import Auth from 'components/pages/auth.js'
+import Register from 'components/pages/register.js'
 
 ReactDOM.render((
   <Provider store={Store}>
@@ -33,6 +34,7 @@ ReactDOM.render((
           <Route exact path='/event' component={Event} />
           <Route exact path='/contact' component={Contact} />
           <Route exact path='/auth' component={Auth} />
+          <Route exact path='/register' component={Register} />
           <Footer />
         </div>
       </Router>
