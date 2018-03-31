@@ -8,16 +8,18 @@ import 'styles/auth.css'
 
 class Register extends Component {
   render() {
-    const {signedIn } = this.props
-    
+
     return (
       <div className='auth-page container-fluid'>
-      
+
         <div id='register-container'>
           <h1>Đăng ký</h1>
+          
+          <a id="register-a" href="/auth">
           <span className='close-btn'>
-            <img src='//cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png' />
+              <img src='//cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png' />
           </span>
+          </a>
           <DecoratedRegisterForm />
         </div>
       </div>

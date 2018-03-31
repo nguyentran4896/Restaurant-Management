@@ -44,7 +44,6 @@ export const submitRegister =
   const url = 'website/register'
   const params = { email: email, password: password,  name: name, phoneNumber: phoneNumber, position: position, birthday: birthday, gender: gender }
   return request(makeRequestOptions(params, url)).then(body => {
-    debugger;
     if (body.code === 0) {
       showNotification('topCenter', 'success', 'Đăng ký thành công')
       Navigator.push('auth')
