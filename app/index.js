@@ -18,17 +18,35 @@ import Event from 'components/pages/event.js'
 import Contact from 'components/pages/contact.js'
 import Auth from 'components/pages/auth.js'
 import Register from 'components/pages/register.js'
+import { ToastContainer } from 'react-toastify'
+import Transition from 'react-transition-group/Transition'
+
+const ZoomInAndOut = ({ children, position, ...props }) => (
+  <Transition
+    {...props}
+    timeout={800}
+    onEnter={ node => node.classList.add('zoomIn', 'animate')}
+    onExit={node => {
+      node.classList.remove('zoomIn', 'animate')
+      node.classList.add('zoomOut', 'animate')
+    }}
+  >
+    {children}
+  </Transition>
+)
 
 ReactDOM.render((
   <Provider store={Store}>
     <Router history={Navigator}>
-      <Router>
+      <Router >
         <div className='App'>
+        
           <Switch>
             <Route path='/' component={HomeHeader} exact />
             <Route path='*' component={Header} />
           </Switch>
 
+          <ToastContainer transition={ZoomInAndOut}/>
           <Route exact path='/' component={Homepage} />
           <Route exact path='/menu' component={Menu} />
           <Route exact path='/event' component={Event} />

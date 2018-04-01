@@ -4,6 +4,7 @@ import LoginForm from 'components/form/Login'
 import { submitLogin } from '../../lib/actions/submit'
 import 'styles/auth.css'
 
+import { ToastContainer, toast } from 'react-toastify';
 class Auth extends Component {
   render() {
     return (

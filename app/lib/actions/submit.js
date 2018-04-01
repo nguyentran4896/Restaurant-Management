@@ -15,6 +15,7 @@ export const submitLogin =
     const params = { email: email, password: password }
 
     return request(makeRequestOptions(params, url)).then(body => {
+      debugger;
       if (body.code === 0) {
         Navigator.push('')
       } else if (body.code === 416) {
@@ -47,6 +48,8 @@ export const submitRegister =
     if (body.code === 0) {
       showNotification('topCenter', 'success', 'Đăng ký thành công')
       Navigator.push('auth')
+    } else if(body.code === 418){
+      showNotification('topCenter', 'error', 'Email đã được đăng ký')
     } else {
       showNotification('topCenter', 'error', 'Lỗi hệ thống')
     }
