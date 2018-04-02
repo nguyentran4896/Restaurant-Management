@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { reduxForm } from 'redux-form'
 import LoginForm from 'components/form/Login'
-import { submitLogin } from '../../lib/actions/submit'
+import RegisterForm from 'components/form/Register'
+import { submitLogin, submitRegister } from '../../lib/actions/submit'
 
 import 'styles/auth.css'
 
@@ -9,9 +10,6 @@ class Auth extends Component {
   render() {
     return (
       <div className='auth-page container-fluid'>
-        <div id='login-button'>
-          <img src='//dqcgrsy5v35b9.cloudfront.net/cruiseplanner/assets/img/icons/login-w-icon.png' />
-        </div>
         <div id='container'>
           <h1>Đăng nhập</h1>
           <span className='close-btn'>
@@ -21,21 +19,18 @@ class Auth extends Component {
           <div className='container-fluid'>
             <DecoratedLoginForm />
             <div id='remember-container'>
-              <span id='forgotten'>Quên mật khẩu</span>
+              <span id='forgotten'>Đăng ký</span>
             </div>
           </div>
         </div>
 
         <div id='forgotten-container'>
-          <h1>Quên mật khẩu</h1>
+          <h1>Đăng ký</h1>
           <span className='close-btn'>
             <img src='//cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png' />
           </span>
 
-          <form>
-            <input type='email' name='email' placeholder='E-mail' />
-            <a href='#' className='orange-btn'>Lấy mật khẩu mới</a>
-          </form>
+          <DecoratedRegisterForm />
         </div>
       </div>
     )
@@ -47,5 +42,10 @@ const DecoratedLoginForm = reduxForm({
   form: 'login',
   onSubmit: submitLogin
 })(LoginForm)
+
+const DecoratedRegisterForm = reduxForm({
+  form: 'Register',
+  onSubmit: submitRegister
+})(RegisterForm)
 
 export default Auth

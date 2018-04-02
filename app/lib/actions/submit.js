@@ -10,15 +10,51 @@ import Navigator from 'lib/Navigator'
 export const submitLogin =
   (values, dispatch, props) => {
     const { email, password } = values
-    let admin = null
+    let user = null
 
     const url = 'login'
     const params = { email: email, password: password }
 
     return request(makePostRequestOptions(params, url)).then(body => {
       if (body.code === 0) {
-        admin = body.data
-        dispatch(userHasSignedIn(admin))
+        user = body.data
+        dispatch(userHasSignedIn(user))
+        window.location.href = '/'
+      } else if (body.code === 416) {
+        showNotification('topCenter', 'error', 'Mật khẩu không hợp lệ!')
+      } else if (body.code === 414) {
+        showNotification('topCenter', 'error', 'Tài khoản không tồn tại!')
+      } else {
+        showNotification('topCenter', 'error', 'Lỗi hệ thống')
+      }
+
+      return Promise.resolve()
+    })
+    .catch(function (err) {
+      if (err.message) {
+        showNotification('topCenter', 'error', err.message)
+        throw new SubmissionError({ _error: err.message })
+      } else {
+        showNotification('topCenter', 'error', JSON.stringify(err))
+        throw new SubmissionError({ _error: JSON.stringify(err) })
+      }
+    })
+  }
+
+  export const submitRegister =
+  (values, dispatch, props) => {
+    const { email, password, phoneNumer } = values
+    let user = null
+
+    const url = 'createUser'
+    const params = { email: email, password: password, phoneNumer: phoneNumer }
+
+    return request(makePostRequestOptions(params, url)).then(body => {
+      console.log(body);
+      
+      if (body.code === 0) {
+        user = body.data
+        dispatch(userHasSignedIn(user))
         window.location.href = '/'
       } else if (body.code === 416) {
         showNotification('topCenter', 'error', 'Mật khẩu không hợp lệ!')

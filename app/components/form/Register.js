@@ -5,8 +5,8 @@ import InputText from 'components/form/element/InputText'
 import SubmitButton from 'components/form/element/SubmitButton'
 
 // This form is pure so it is easy to test
-// Page/Login will decorate it with the necessary props
-const LoginForm = (props) => {
+// Page/Register will decorate it with the necessary props
+const RegisterForm = (props) => {
   const { submitting, handleSubmit } = props
   return (
     <form onSubmit={handleSubmit} style={{ marginTop: '20px' }}>
@@ -17,6 +17,19 @@ const LoginForm = (props) => {
         type='email'
         required={true}
         placeHolder='Email'
+      />
+      <Field name='name'
+        component={InputText}
+        label='Tên người dùng'
+        type='text'
+        required={true}
+        placeHolder='Tên'
+      />
+      <Field name='phoneNumber'
+        component={InputText}
+        label='Số điện thoại'
+        type='text'
+        placeHolder='Số điện thoại'
       />
       <Field
         name='password'
@@ -31,8 +44,8 @@ const LoginForm = (props) => {
         submitting={submitting}
         className='btn btn-primary btn-block btn-flat'
       />
-     </form>
+    </form>
   )
 }
 
-export default LoginForm
+export default RegisterForm

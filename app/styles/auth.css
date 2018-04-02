@@ -50,7 +50,6 @@
     border-radius: 5px;
     background: rgba(3, 3, 3, 0.75);
     box-shadow: 1px 1px 50px #000;
-    display: none;
     padding: 5px 0;
 }
 
@@ -225,7 +224,7 @@
     bottom: 0;
     margin: auto;
     width: 260px;
-    height: 160px;
+    height: 400px;
     border-radius: 10px;
     background: rgba(3, 3, 3, 0.75);
     box-shadow: 1px 1px 50px #000;
