@@ -43,12 +43,12 @@ export const submitLogin =
 
   export const submitRegister =
   (values, dispatch, props) => {
-    const { email, password, phoneNumer } = values
+    const { email, password, phoneNumber, name } = values
     let user = null
 
     const url = 'createUser'
-    const params = { email: email, password: password, phoneNumer: phoneNumer }
-
+    const params = { email: email, password: password, phoneNumber: phoneNumber, name: name }
+    
     return request(makePostRequestOptions(params, url)).then(body => {
       console.log(body);
       

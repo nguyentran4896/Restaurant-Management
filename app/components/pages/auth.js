@@ -44,7 +44,7 @@ const DecoratedLoginForm = reduxForm({
 })(LoginForm)
 
 const DecoratedRegisterForm = reduxForm({
-  form: 'Register',
+  form: 'register',
   onSubmit: submitRegister
 })(RegisterForm)
 

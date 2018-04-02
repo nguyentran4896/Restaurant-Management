@@ -40,7 +40,7 @@ const RegisterForm = (props) => {
         placeHolder='Mật khẩu'
       />
       <SubmitButton
-        text='Đăng nhập'
+        text='Đăng ký'
         submitting={submitting}
         className='btn btn-primary btn-block btn-flat'
       />
