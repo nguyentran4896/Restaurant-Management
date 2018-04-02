@@ -1,7 +1,7 @@
 import { SubmissionError } from 'redux-form'
 import request from 'request-promise'
 
-import { makeRequestOptions } from '../requestHeader'
+import { makePostRequestOptions } from '../requestHeader'
 import { adminHasSignedIn } from 'ducks/user'
 import { showNotification } from './showNotification'
 import Navigator from 'lib/Navigator'
@@ -15,7 +15,7 @@ export const submitLogin =
     const url = 'login'
     const params = { email: email, password: password }
 
-    return request(makeRequestOptions(params, url)).then(body => {
+    return request(makePostRequestOptions(params, url)).then(body => {
       if (body.code === 0) {
         admin = body.data
         dispatch(adminHasSignedIn(admin))
