@@ -2,7 +2,7 @@ import { SubmissionError } from 'redux-form'
 import request from 'request-promise'
 
 import { makePostRequestOptions } from '../requestHeader'
-import { adminHasSignedIn } from 'ducks/user'
+import { userHasSignedIn } from 'ducks/user'
 import { showNotification } from './showNotification'
 import Navigator from 'lib/Navigator'
 // Redux-form requires a promise for async submission
@@ -18,7 +18,8 @@ export const submitLogin =
     return request(makePostRequestOptions(params, url)).then(body => {
       if (body.code === 0) {
         admin = body.data
-        dispatch(adminHasSignedIn(admin))
+        dispatch(userHasSignedIn(admin))
+        window.location.href = '/'
       } else if (body.code === 416) {
         showNotification('topCenter', 'error', 'Mật khẩu không hợp lệ!')
       } else if (body.code === 414) {

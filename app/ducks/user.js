@@ -3,9 +3,9 @@ import 'react-confirm-alert/src/react-confirm-alert.css'
 
 import Navigator from 'lib/Navigator'
 
-const ADMIN_SIGNED_IN = 'user/ADMIN_SIGNED_IN'
+const USER_SIGNED_IN = 'user/USER_SIGNED_IN'
 const UPDATE_ACTIVE_LINK = 'user/UPDATE_ACTIVE_LINK'
-export const ADMIN_SIGNED_OUT = 'user/ADMIN_SIGNED_OUT'
+export const USER_SIGNED_OUT = 'user/USER_SIGNED_OUT'
 
 export const dispatchLogout = (dispatch) => () => {
   confirmAlert({
@@ -26,16 +26,16 @@ export const dispatchLogout = (dispatch) => () => {
 
 // Creators
 export const userHasSignedOutNoRedirect = () => (dispatch) => {
-  dispatch({ type: ADMIN_SIGNED_OUT })
+  dispatch({ type: USER_SIGNED_OUT })
 }
 
 export const userHasSignedOut = () => (dispatch) => {
-  dispatch({ type: ADMIN_SIGNED_OUT })
+  dispatch({ type: USER_SIGNED_OUT })
   Navigator.push('login')
 }
 
-export const userHasSignedIn = (admin) => (dispatch) => {
-  dispatch({ type: ADMIN_SIGNED_IN, data: admin })
+export const userHasSignedIn = (USER) => (dispatch) => {
+  dispatch({ type: USER_SIGNED_IN, data: USER })
 }
 
 export const updateActiveLink = (link) => (dispatch) => {
@@ -53,7 +53,7 @@ const reducer = (state = defaultState, action) => {
   const { type, data, activeLink } = action
 
   switch (type) {
-    case ADMIN_SIGNED_IN:
+    case USER_SIGNED_IN:
       return {
         ...state,
         signedIn: true,
@@ -65,7 +65,7 @@ const reducer = (state = defaultState, action) => {
         signedIn: true,
         activeLink: activeLink
       }
-    case ADMIN_SIGNED_OUT:
+    case USER_SIGNED_OUT:
       return {...defaultState}
     default:
       return state
