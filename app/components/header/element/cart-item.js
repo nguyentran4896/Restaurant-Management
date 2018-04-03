@@ -8,10 +8,11 @@ class CartItem extends Component {
   }
   
   render() {
-    const { foodState, dispatch } = this.props
+    const { foodState, food, dispatch } = this.props
     return (
-      <div className='col-md-4 menu-bottom1'>
-        sadfasfasf
+      <div className='cart-item'>
+        <img src={food.imageUrl || '/lib/images/me.jpg'} />
+        <span className='name'>{food.name}</span>
       </div>
     )
   }

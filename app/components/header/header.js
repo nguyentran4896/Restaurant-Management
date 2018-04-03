@@ -29,7 +29,6 @@ class Header extends Component {
 
   render() {
     const { foodState, user, dispatch } = this.props
-    console.log(foodState.items);
 
     return (
       <div className='header head'>
