@@ -6,7 +6,7 @@ import {
   FETCH_FOOD_TOTAL_PAGE
 } from 'lib/actions/food'
 
-import { ADMIN_SIGNED_OUT } from 'ducks/user'
+import { USER_SIGNED_OUT } from 'ducks/user'
 
 const initialState = {
   items: [],
@@ -54,7 +54,7 @@ const reducer = (state = initialState, action) => {
         totalPage: action.totalPage
       }
 
-    case ADMIN_SIGNED_OUT:
+    case USER_SIGNED_OUT:
       return {...initialState}
     default:
       return state

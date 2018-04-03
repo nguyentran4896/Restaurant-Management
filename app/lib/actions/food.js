@@ -40,6 +40,20 @@ export const getFoods = params => dispatch => {
 }
 
 export const selectFood = (foodState, indexItem, dispatch) => {
-    foodState.items[indexItem]['isSelected'] = !foodState.items[indexItem]['isSelected'];
-    dispatch(fetchFoodsSuccess(foodState.items))
-  }
+  foodState.items[indexItem]['isSelected'] = !foodState.items[indexItem]['isSelected'];
+  dispatch(fetchFoodsSuccess(foodState.items))
+}
+
+export const submitOrder = (foodState, user, dispatch) => {
+  const arrayItems = foodState.items.filter(x => x.isSelected)
+  const objectItems = toObject(arrayItems)
+
+  const url = 'order'
+}
+
+function toObject(arr) {
+  var rv = {};
+  for (var i = 0; i < arr.length; ++i)
+    if (arr[i] !== undefined) rv[arr[i].id] = arr[i];
+  return rv;
+}

@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { getFoods, selectFood } from 'lib/actions/food'
+import { getFoods, selectFood, submitOrder } from 'lib/actions/food'
 import FoodItem from 'components/pages/element/menu-item'
+import ButtonOrder from 'components/pages/element/button-order'
 import 'styles/menu.css'
 
 class Menu extends Component {
@@ -10,7 +11,7 @@ class Menu extends Component {
   }
 
   render() {
-    const { foodState, error, dispatch } = this.props
+    const { foodState, user, dispatch } = this.props
     return (
       <div className='menu'>
         <div className='container'>
@@ -30,20 +31,22 @@ class Menu extends Component {
 
             {foodState.items.map((x, i) =>
               <FoodItem
-                key={i} 
-                selectFood={selectFood} 
-                indexItem={i} 
+                key={i}
+                selectFood={selectFood}
+                indexItem={i}
                 foodState={foodState}
-                dispatch={dispatch} 
+                dispatch={dispatch}
                 food={x} />
             )}
 
             <div className='clearfix' />
           </div>
 
-          <div className='button-order'>
-            Order
-          </div>
+          <ButtonOrder
+            submitOrder={submitOrder}
+            user={user}
+            dispatch={dispatch}
+            foodState={foodState} />
 
         </div>
       </div>
@@ -52,7 +55,8 @@ class Menu extends Component {
 }
 
 const mapStateToProps = state => ({
-  foodState: state.food
+  foodState: state.food,
+  user: state.user
 })
 
 export default connect(mapStateToProps)(Menu)
