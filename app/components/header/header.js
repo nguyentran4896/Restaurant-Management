@@ -1,9 +1,23 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import $ from 'jquery'
+import 'styles/header.css'
 
 class Header extends Component {
-  componentDidMount () {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOpenCart: false
+    }
+  }
+
+  toggleCart() {
+    this.setState({
+      isOpenCart: !this.state.isOpenCart
+    })
+  }
+
+  componentDidMount() {
     $('.navicon').on('click', function (e) {
       e.preventDefault()
       $(this).toggleClass('navicon--active')
@@ -11,7 +25,7 @@ class Header extends Component {
     })
   }
 
-  render () {
+  render() {
     return (
       <div className='header head'>
         <div className='container'>
@@ -23,7 +37,7 @@ class Header extends Component {
                 <img src='/lib/images/oo.png' alt='' />
                 kery
               </Link>
-            S</h1>
+              S</h1>
           </div>
           <div className='nav-icon'>
             <a href='#' className='navicon' />
@@ -37,6 +51,14 @@ class Header extends Component {
               </ul>
             </div>
           </div>
+
+          <div className='cart-wrapper'>
+            <img className='cart' src='/lib/images/shopping-cart.png'
+              onClick={this.toggleCart.bind(this)} />
+            <ol className={'cart-modal' + (this.state.isOpenCart ? ' active' : '')}>
+            </ol>
+          </div>
+
           <div className='clearfix' />
         </div>
       </div>
