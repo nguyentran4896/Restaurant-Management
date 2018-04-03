@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 import $ from 'jquery'
+import CartItem from 'components/header/element/cart-item'
 import 'styles/header.css'
 
 class Header extends Component {
@@ -26,6 +28,9 @@ class Header extends Component {
   }
 
   render() {
+    const { foodState, user, dispatch } = this.props
+    console.log(foodState.items);
+
     return (
       <div className='header head'>
         <div className='container'>
@@ -56,7 +61,18 @@ class Header extends Component {
             <img className='cart' src='/lib/images/shopping-cart.png'
               onClick={this.toggleCart.bind(this)} />
             <ol className={'cart-modal' + (this.state.isOpenCart ? ' active' : '')}>
+              {foodState.items
+                .filter(x => x.isSelected)
+                .map((x, i) =>
+                  <CartItem
+                    key={i}
+                    indexItem={i}
+                    foodState={foodState}
+                    dispatch={dispatch}
+                    food={x} />
+                )}
             </ol>
+            <div className='badge'>{foodState.items.filter(x => x.isSelected).length}</div>
           </div>
 
           <div className='clearfix' />
@@ -66,4 +82,9 @@ class Header extends Component {
   }
 }
 
-export default Header
+const mapStateToProps = state => ({
+  foodState: state.food,
+  user: state.user
+})
+
+export default connect(mapStateToProps)(Header)

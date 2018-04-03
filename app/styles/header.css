@@ -55,6 +55,11 @@
   border-left: solid 10px transparent;
   border-right: solid 10px transparent;
 }
+.badge {
+  top: 8px;
+  left: -50px;
+  position: absolute;
+}
 .item {
   box-sizing: border-box;
   width: 130px;
