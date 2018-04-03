@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getFoods, selectFood } from 'lib/actions/food'
 import FoodItem from 'components/pages/element/menu-item'
+import 'styles/menu.css'
 
 class Menu extends Component {
   componentDidMount() {
@@ -38,6 +39,10 @@ class Menu extends Component {
             )}
 
             <div className='clearfix' />
+          </div>
+
+          <div className='button-order'>
+            Order
           </div>
 
         </div>
