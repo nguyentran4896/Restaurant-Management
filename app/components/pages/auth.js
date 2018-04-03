@@ -25,12 +25,14 @@ class Auth extends Component {
         </div>
 
         <div id='forgotten-container'>
-          <h1>Đăng ký</h1>
-          <span className='close-btn'>
-            <img src='//cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png' />
-          </span>
+          <div className='container-fluid'>
+            <h1>Đăng ký</h1>
+            <span className='close-btn'>
+              <img src='//cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png' />
+            </span>
 
-          <DecoratedRegisterForm />
+            <DecoratedRegisterForm />
+          </div>
         </div>
       </div>
     )
