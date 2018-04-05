@@ -1,6 +1,14 @@
 body{
 	background:#fff;	
-	font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.header.head {
+  position: fixed;
+  z-index: 10;
+}
+div.content {
+  padding-top: 50px;
 }
 .navicon {
   background: transparent;

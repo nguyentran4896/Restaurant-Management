@@ -41,7 +41,7 @@ class Header extends Component {
                 <img src='/lib/images/oo.png' alt='' />
                 kery
               </Link>
-              S</h1>
+            </h1>
           </div>
           <div className='nav-icon'>
             <a href='#' className='navicon' />
