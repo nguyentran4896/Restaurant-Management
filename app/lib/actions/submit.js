@@ -13,7 +13,7 @@ export const submitLogin =
     let user = null
 
     const url = 'login'
-    const params = { email: email, password: password }
+    const params = { email: email, password: password, vendorId: 1 }
 
     return request(makePostRequestOptions(params, url)).then(body => {
       if (body.code === 0) {
@@ -47,7 +47,7 @@ export const submitLogin =
     let user = null
 
     const url = 'createUser'
-    const params = { email: email, password: password, phoneNumber: phoneNumber, name: name }
+    const params = { email: email, password: password, phoneNumber: phoneNumber, name: name, vendorId: 1 }
     
     return request(makePostRequestOptions(params, url)).then(body => {
       console.log(body);
