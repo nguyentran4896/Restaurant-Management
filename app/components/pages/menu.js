@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { getFoods, minusFoodQuantity, plusFoodQuantity, submitOrder } from 'lib/actions/food'
+import { getFoods, minusFoodQuantity, plusFoodQuantity } from 'lib/actions/food'
+import { submitOrder } from 'lib/actions/order'
 import FoodItem from 'components/pages/element/menu-item'
 import ButtonOrder from 'components/pages/element/button-order'
 import 'styles/menu.css'
