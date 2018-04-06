@@ -49,8 +49,7 @@ class Menu extends Component {
               submitOrder={submitOrder}
               user={user}
               dispatch={dispatch}
-              foodState={foodState}
-              transactionId={order.id} />
+              foodState={foodState} />
 
           </div>
         </div>

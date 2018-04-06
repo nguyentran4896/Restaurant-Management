@@ -24,22 +24,43 @@ export const submitOrder = (foodState, user, dispatch) => {
     showNotificationNotSignedIn()
     return
   }
-  const arrayItems = foodState.items.filter(x => x.quantity)
-  const newKey = firebase.database().ref(user.data.vendorId + '/orders/').push().key
-  const newOrder = {
-    createdAt: Date.now(),
-    updatedAt: Date.now(),
-    transactionId: 'BILL.' + moment.utc().format('YYYY.MM.DD.hh.mm.ss'),
-    status: 'Đang chờ xác nhận',
-    totalPrice: R.sum(arrayItems.map(x => x.currentPrice * x.quantity)),
-    items: arrayItems.map(x => { x['status'] = 'Đang gọi món'; return x }),
-    userName: user.data.name,
-    userId: user.data.uid,
-    id: newKey
-  }
-  firebase.database().ref(user.data.vendorId + '/orders/').child(newKey).set(newOrder)
-  dispatch(fetchOrdersSuccess(newOrder))
+  const arrayItems = foodState.items
+    .filter(x => x.quantity)
+    .map(x => { x['status'] = 'Đang gọi món'; return x })
 
+  var key, order;
+  firebase.database().ref(user.data.vendorId + '/orders/')
+    .orderByChild('userId')
+    .equalTo(user.data.uid)
+    .once('value', function (snapshot) {
+      order = R.values(snapshot.val()).filter(x => x.status === 'Đang gọi món')
+      if (!snapshot.val() && !order.le) {
+        key = firebase.database().ref(user.data.vendorId + '/orders/').push().key
+        order = {
+          createdAt: Date.now(),
+          updatedAt: Date.now(),
+          transactionId: 'BILL.' + moment.utc().format('YYYY.MM.DD.hh.mm.ss'),
+          status: 'Đang gọi món',
+          totalPrice: R.sum(arrayItems.map(x => x.currentPrice * x.quantity)),
+          items: arrayItems,
+          userName: user.data.name,
+          userId: user.data.uid,
+          id: key
+        }
+        firebase.database().ref(user.data.vendorId + '/orders/').child(key).set(order)
+        dispatch(fetchOrdersSuccess(order))
+
+      } else {
+        order = order[0]
+        key = order.id
+        order.items = order.items.concat(arrayItems)
+        order.updatedAt = Date.now()
+        order.totalPrice = R.sum(order.items.map(x => x.currentPrice * x.quantity))
+
+        firebase.database().ref(user.data.vendorId + '/orders/').child(key).set(order)
+        dispatch(fetchOrdersSuccess(order))
+      }
+    });
   showNotification('topCenter', 'success', 'Gọi món thành công!')
 }
 
