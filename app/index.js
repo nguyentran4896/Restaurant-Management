@@ -17,6 +17,7 @@ import Menu from 'components/pages/menu.js'
 import Event from 'components/pages/event.js'
 import Contact from 'components/pages/contact.js'
 import Auth from 'components/pages/auth.js'
+import MapTable from 'components/pages/maps/MapTable.js'
 
 const ZoomInAndOut = ({ children, position, ...props }) => (
   <Transition
@@ -45,6 +46,7 @@ class App extends React.Component {
                 <Route exact path='/event' component={Event} />
                 <Route exact path='/contact' component={Contact} />
                 <Route exact path='/auth' component={Auth} />
+                <Route exact path='/map' component={MapTable} />
               </Switch>
             </Layout>
             <ToastContainer transition={ZoomInAndOut} />
