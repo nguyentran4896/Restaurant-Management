@@ -31,7 +31,7 @@ export const fetchFoodsError = error => ({
 export const getFoods = params => dispatch => {
   request(makeGetRequestOptions('?vendorId=1', 'foods')).then(body => {
     if (body.code === 401 || body.code === 400 || body.code === 414) {
-      showNotification('topRight', 'error', 'Quá trình xác thực xảy ra lỗi!')
+      showNotification('topCenter', 'error', 'Quá trình xác thực xảy ra lỗi!')
     } else {
       dispatch(fetchFoodsSuccess(body.data.items))
     }

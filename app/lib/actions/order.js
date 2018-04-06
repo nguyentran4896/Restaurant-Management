@@ -20,6 +20,10 @@ export const getOrders = params => dispatch => {
 }
 
 export const submitOrder = (foodState, user, dispatch) => {
+  if (!user.signedIn) {
+    showNotificationNotSignedIn()
+    return
+  }
   const arrayItems = foodState.items.filter(x => x.quantity)
   const newKey = firebase.database().ref(user.data.vendorId + '/orders/').push().key
   const newOrder = {
@@ -30,10 +34,15 @@ export const submitOrder = (foodState, user, dispatch) => {
     totalPrice: R.sum(arrayItems.map(x => x.currentPrice * x.quantity)),
     items: arrayItems.map(x => { x['status'] = 'Đang gọi món'; return x }),
     userName: user.data.name,
-    userId: user.data.uid
+    userId: user.data.uid,
+    id: newKey
   }
   firebase.database().ref(user.data.vendorId + '/orders/').child(newKey).set(newOrder)
   dispatch(fetchOrdersSuccess(newOrder))
 
-  showNotification('topRight', 'success', 'Gọi món thành công!')
+  showNotification('topCenter', 'success', 'Gọi món thành công!')
+}
+
+const showNotificationNotSignedIn = () => {
+  showNotification('topCenter', 'error', 'Bạn cần đăng nhập để gọi món')
 }
