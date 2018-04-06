@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { getFoods, selectFood, submitOrder } from 'lib/actions/food'
+import { getFoods, minusFoodQuantity, plusFoodQuantity, submitOrder } from 'lib/actions/food'
 import FoodItem from 'components/pages/element/menu-item'
 import ButtonOrder from 'components/pages/element/button-order'
 import 'styles/menu.css'
@@ -33,7 +33,8 @@ class Menu extends Component {
               {foodState.items.map((x, i) =>
                 <FoodItem
                   key={i}
-                  selectFood={selectFood}
+                  minusFoodQuantity={minusFoodQuantity}
+                  plusFoodQuantity={plusFoodQuantity}
                   indexItem={i}
                   foodState={foodState}
                   dispatch={dispatch}

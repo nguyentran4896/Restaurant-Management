@@ -49,3 +49,18 @@
   right: 0;
   top: 0;
 }
+
+.number-order {
+  color: #fff;
+  padding-top: 30px;
+}
+
+.number-order i {
+  margin: 15px;
+}
+
+.number-order span {
+  font-size: 38px;
+  font-weight: bold;
+  line-height: 40px;
+}

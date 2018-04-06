@@ -39,8 +39,14 @@ export const getFoods = params => dispatch => {
     .catch(err => dispatch(fetchFoodsError(err)))
 }
 
-export const selectFood = (foodState, indexItem, dispatch) => {
-  foodState.items[indexItem]['isSelected'] = !foodState.items[indexItem]['isSelected'];
+export const plusFoodQuantity = (foodState, indexItem, dispatch) => {
+  foodState.items[indexItem]['quantity'] = 1 + (foodState.items[indexItem]['quantity'] || 0);
+  dispatch(fetchFoodsSuccess(foodState.items))
+}
+
+export const minusFoodQuantity = (foodState, indexItem, dispatch) => {
+  foodState.items[indexItem]['quantity'] = - 1 + (foodState.items[indexItem]['quantity'] || 0);
+  foodState.items[indexItem]['quantity'] = foodState.items[indexItem]['quantity'] < 0 ? 0 : foodState.items[indexItem]['quantity'];
   dispatch(fetchFoodsSuccess(foodState.items))
 }
 
