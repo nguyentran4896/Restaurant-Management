@@ -6,7 +6,7 @@ import Navigator from 'lib/Navigator'
 import 'styles/website.less'
 import { fetchZones } from 'lib/actions/zone.js'
 
-import MapElement from 'components/pages/maps/MapElement'
+import MapElement from 'components/pages/maps/MapElement.js'
 
 class MapTable extends Component {
   componentDidMount() {
@@ -23,10 +23,10 @@ class MapTable extends Component {
               const imageUrl = R.values(value.imageUrl)[0]
 
               return (
-                <div className='card'>
+                <div className='card' key={index}>
                   <section style={{ padding: '5px', backgroundImage: 'url("' + imageUrl + '")' }}>
                     <div className='container-fluid table-container'>
-                      {/* <MapElement /> */}
+                      <MapElement />
                     </div>
                   </section>
                 </div>

@@ -12,11 +12,10 @@ const avatarStyle = {
 
 class MapElement extends Component {
   render() {
-    console.log(Draggable);
-    
     return (
       <Draggable
         allowAnyClick={true}
+        disabled={true}
         axis='both'
         handle='.handle'
         bounds='parent'
@@ -26,9 +25,6 @@ class MapElement extends Component {
         onDrag={this.handleDrag}
         onStop={this.handleStop}>
         <div className='table handle'>
-          <Link to='#' style={{ float: 'right', position: 'absolute', marginLeft: '20px' }}>
-            <img src='images/delete.png' style={{ marginTop: '45px', width: '25px', height: '25px' }} />
-          </Link>
           <div style={avatarStyle} className='table-wrapper'>
             <input className='table-number' defaultValue={'test'} />
             <input className='table-number' readOnly value={'test'} style={{ background: 'red', color: 'white' }} />
