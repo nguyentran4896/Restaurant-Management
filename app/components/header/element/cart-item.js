@@ -6,13 +6,17 @@ class CartItem extends Component {
   constructor(props) {
     super(props)
   }
-  
+
   render() {
-    const { foodState, food, dispatch } = this.props
+    const { order, indexItem, dispatch } = this.props
     return (
       <div className='cart-item'>
-        <img src={food.imageUrl || '/lib/images/me.jpg'} />
-        <span className='name'>{food.name}</span>
+        <img src={order.items[indexItem].imageUrl || '/lib/images/me.jpg'} />
+        <div>
+          <span className='name'>{order.items[indexItem].name + ' (' + order.items[indexItem].quantity + ')'}</span>
+          <br />
+          <span className='status'>{order.items[indexItem].status}</span>
+        </div>
       </div>
     )
   }

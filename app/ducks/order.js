@@ -2,7 +2,9 @@ import { FETCH_ORDER_SUCCESS } from 'lib/actions/order'
 import { USER_SIGNED_OUT } from 'ducks/user'
 
 const initialState = {
-  order: {},
+  data: {
+    items: []
+  },
   error: null
 }
 
@@ -12,7 +14,7 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        order: action.order
+        data: action.order
       }
 
     case USER_SIGNED_OUT:

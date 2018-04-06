@@ -28,8 +28,7 @@ class Header extends Component {
   }
 
   render() {
-    const { foodState, user, dispatch } = this.props
-
+    const { order, user, dispatch } = this.props
     return (
       <div className='header head'>
         <div className='container'>
@@ -61,18 +60,15 @@ class Header extends Component {
             <img className='cart' src='/lib/images/shopping-cart.png'
               onClick={this.toggleCart.bind(this)} />
             <ol className={'cart-modal' + (this.state.isOpenCart ? ' active' : '')}>
-              {foodState.items
-                .filter(x => x.isSelected)
-                .map((x, i) =>
-                  <CartItem
-                    key={i}
-                    indexItem={i}
-                    foodState={foodState}
-                    dispatch={dispatch}
-                    food={x} />
-                )}
+              {order.items.map((x, i) =>
+                <CartItem
+                  key={i}
+                  indexItem={i}
+                  order={order}
+                  dispatch={dispatch} />
+              )}
             </ol>
-            <div className='badge'>{foodState.items.filter(x => x.isSelected).length}</div>
+            <div className='badge'>{order.items.filter(x => x.quantity).length}</div>
           </div>
 
           <div className='clearfix' />
@@ -83,8 +79,8 @@ class Header extends Component {
 }
 
 const mapStateToProps = state => ({
-  foodState: state.food,
-  user: state.user
+  user: state.user,
+  order: state.order.data
 })
 
 export default connect(mapStateToProps)(Header)

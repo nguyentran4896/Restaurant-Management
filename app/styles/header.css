@@ -64,7 +64,7 @@
 
 .cart-item {
   padding: 10px;
-  min-width: 200px;
+  min-width: 240px;
   cursor: pointer;
 }
 
@@ -80,8 +80,16 @@
   object-fit: cover;
   object-position: center;
   display: inline-block;
+  vertical-align: bottom;
 }
 
-.cart-item .name {
-  margin-left: 10px;
+.cart-item div {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.cart-item .status {
+  font-size: 12px;
+  font-weight: normal;
+  font-style: italic;
 }
