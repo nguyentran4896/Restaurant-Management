@@ -17,7 +17,7 @@ class MapTable extends Component {
     const { zones } = this.props
     return (
       <div className='content'>
-        <div className='container-fluid animated fadeIn'>
+        <div className='container-fluid animated fadeIn' style={{ marginTop: '40px' }}>
           <div className='row'>
               {R.values(zones).map((value, index) => {
               const imageUrl = R.values(value.imageUrl)[0]

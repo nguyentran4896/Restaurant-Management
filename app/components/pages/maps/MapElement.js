@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
 import R from 'ramda'
-import 'styles/website.less'
-
 import Draggable from 'react-draggable'
 
 const avatarStyle = {
