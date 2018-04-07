@@ -2,22 +2,25 @@ import { SubmissionError } from 'redux-form'
 import request from 'request-promise'
 
 import { makeRequestOptions } from '../requestHeader'
-import { adminHasSignedIn } from 'ducks/admin'
 import { showNotification } from './showNotification'
 import Navigator from 'lib/Navigator'
+import { userHasSignedIn } from 'ducks/user'
 // Redux-form requires a promise for async submission
 // so we return a promise
 export const submitLogin =
   (values, dispatch, props) => {
     const { email, password } = values
-
-    const url = 'login'
+    let userLogin = null;
+    const url = 'website/login'
+    // const url = 'login'
     const params = { email: email, password: password }
 
     return request(makeRequestOptions(params, url)).then(body => {
-      debugger;
+     debugger;
       if (body.code === 0) {
-        Navigator.push('')
+        userLogin = body.data;
+        dispatch(userHasSignedIn(userLogin))
+        Navigator.push('/')
       } else if (body.code === 416) {
         showNotification('topCenter', 'error', 'Mật khẩu không hợp lệ!')
       } else if (body.code === 414) {
@@ -40,6 +43,7 @@ export const submitLogin =
   }
 export const submitRegister = 
 (values, dispatch, props) => {
+  debugger;
   const { email, password,  name, phoneNumber, position, birthday, gender } = values
 
   const url = 'website/register'

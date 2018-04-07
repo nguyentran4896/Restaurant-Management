@@ -1,12 +1,19 @@
 import React, { Component } from 'react'
 import { reduxForm } from 'redux-form'
 import LoginForm from 'components/form/Login'
+import { connect } from 'react-redux'
 import { submitLogin } from '../../lib/actions/submit'
 import 'styles/auth.css'
 
 import { ToastContainer, toast } from 'react-toastify';
 class Auth extends Component {
   render() {
+    const { signedIn } = this.props
+    if(signedIn) {
+      return (
+        <h1>Đã login</h1>
+      )
+    }
     return (
       <div className='auth-page container-fluid'>
         <div id='login-button'>
@@ -43,9 +50,14 @@ class Auth extends Component {
   }
 }
 
+
 // Decorate LoginForm so that form is pure
 const DecoratedLoginForm = reduxForm({
   form: 'login',
   onSubmit: submitLogin
 })(LoginForm)
-export default Auth
+const mapStateToProps = (state) => ({
+  signedIn: state.user.signedIn
+})
+// export default Auth
+export default connect(mapStateToProps)(Auth)
