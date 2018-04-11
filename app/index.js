@@ -16,7 +16,8 @@ import Homepage from 'components/pages/home.js'
 import Menu from 'components/pages/menu.js'
 import Event from 'components/pages/event.js'
 import Contact from 'components/pages/contact.js'
-import Auth from 'components/pages/auth.js'
+import LogIn from 'components/pages/login.js'
+import SignUp from 'components/pages/signup.js'
 import MapTable from 'components/pages/maps/MapTable.js'
 
 const ZoomInAndOut = ({ children, position, ...props }) => (
@@ -45,7 +46,8 @@ class App extends React.Component {
                 <Route exact path='/menu' component={Menu} />
                 <Route exact path='/event' component={Event} />
                 <Route exact path='/contact' component={Contact} />
-                <Route exact path='/auth' component={Auth} />
+                <Route exact path='/login' component={LogIn} />
+                <Route exact path='/signup' component={SignUp} />
                 <Route exact path='/map' component={MapTable} />
               </Switch>
             </Layout>
