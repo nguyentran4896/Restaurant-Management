@@ -16,6 +16,7 @@ const LoginForm = (props) => {
         label='Email'
         type='email'
         required={true}
+        placeHolder='Email'
       />
       <Field
         name='password'
@@ -23,6 +24,7 @@ const LoginForm = (props) => {
         label='Mật khẩu'
         type='password'
         required={true}
+        placeHolder='Mật khẩu'
       />
       <SubmitButton
         text='Đăng nhập'

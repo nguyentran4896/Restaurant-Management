@@ -1,9 +1,25 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 import $ from 'jquery'
+import CartItem from 'components/header/element/cart-item'
+import 'styles/header.css'
 
 class Header extends Component {
-  componentDidMount () {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOpenCart: false
+    }
+  }
+
+  toggleCart() {
+    this.setState({
+      isOpenCart: !this.state.isOpenCart
+    })
+  }
+
+  componentDidMount() {
     $('.navicon').on('click', function (e) {
       e.preventDefault()
       $(this).toggleClass('navicon--active')
@@ -11,7 +27,8 @@ class Header extends Component {
     })
   }
 
-  render () {
+  render() {
+    const { order, user, dispatch } = this.props
     return (
       <div className='header head'>
         <div className='container'>
@@ -23,7 +40,7 @@ class Header extends Component {
                 <img src='/lib/images/oo.png' alt='' />
                 kery
               </Link>
-            S</h1>
+            </h1>
           </div>
           <div className='nav-icon'>
             <a href='#' className='navicon' />
@@ -31,12 +48,29 @@ class Header extends Component {
               <ul className='toggle-menu'>
                 <li><Link to='/'>Home</Link></li>
                 <li><Link to='/menu'>Menu</Link></li>
+                <li><Link to='/map'>Map</Link></li>
                 <li><Link to='/event'>Events</Link></li>
                 <li><Link to='/contact'>Contact</Link></li>
-                <li><Link to='/auth'>Login</Link></li>
+                <li><Link to='/login'>Login</Link></li>
               </ul>
             </div>
           </div>
+
+          <div className='cart-wrapper'>
+            <img className='cart' src='/lib/images/shopping-cart.png'
+              onClick={this.toggleCart.bind(this)} />
+            <ol className={'cart-modal' + (this.state.isOpenCart ? ' active' : '')}>
+              {order.items.map((x, i) =>
+                <CartItem
+                  key={i}
+                  indexItem={i}
+                  order={order}
+                  dispatch={dispatch} />
+              )}
+            </ol>
+            <div className='badge'>{order.items.filter(x => x.quantity).length}</div>
+          </div>
+
           <div className='clearfix' />
         </div>
       </div>
@@ -44,4 +78,9 @@ class Header extends Component {
   }
 }
 
-export default Header
+const mapStateToProps = state => ({
+  user: state.user,
+  order: state.order.data
+})
+
+export default connect(mapStateToProps)(Header)

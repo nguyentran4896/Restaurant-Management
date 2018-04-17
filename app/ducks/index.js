@@ -1,16 +1,14 @@
 import hydration from 'ducks/hydration'
-import admin from 'ducks/admin'
-import employee from 'ducks/employee'
-import foodCategory from 'ducks/foodCategory'
-import notification from 'ducks/notification'
 import user from 'ducks/user'
+
+import food from 'ducks/food'
+import order from 'ducks/order'
+import zone from 'ducks/zone'
 
 export default {
   hydration,
-  admin,
-  employee,
-  foodCategory,
-  notification,
-  user
-
+  user,
+  food,
+  order,
+  zone
 }

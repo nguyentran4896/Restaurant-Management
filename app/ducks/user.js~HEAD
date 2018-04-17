@@ -4,13 +4,12 @@ import 'react-confirm-alert/src/react-confirm-alert.css'
 import Navigator from 'lib/Navigator'
 
 const USER_SIGNED_IN = 'user/USER_SIGNED_IN'
-const UPDATE_ACTIVE_LINK = 'user/UPDATE_ACTIVE_LINK'
 export const USER_SIGNED_OUT = 'user/USER_SIGNED_OUT'
 
 export const dispatchLogout = (dispatch) => () => {
   confirmAlert({
     title: '',
-    message: 'Bạn có muốn đăng xuất?',
+    message: 'Bạn có muốn rời khỏi trang',
     buttons: [
       {
         label: 'Có',
@@ -34,13 +33,10 @@ export const userHasSignedOut = () => (dispatch) => {
   Navigator.push('login')
 }
 
-export const userHasSignedIn = (USER) => (dispatch) => {
-  dispatch({ type: USER_SIGNED_IN, data: USER })
+export const userHasSignedIn = (data) => (dispatch) => {
+  dispatch({ type: USER_SIGNED_IN, data: data })
 }
 
-export const updateActiveLink = (link) => (dispatch) => {
-  dispatch({ type: UPDATE_ACTIVE_LINK, activeLink: link })
-}
 
 // Reducer
 const defaultState = {
@@ -58,12 +54,6 @@ const reducer = (state = defaultState, action) => {
         ...state,
         signedIn: true,
         data
-      }
-    case UPDATE_ACTIVE_LINK:
-      return {
-        ...state,
-        signedIn: true,
-        activeLink: activeLink
       }
     case USER_SIGNED_OUT:
       return {...defaultState}

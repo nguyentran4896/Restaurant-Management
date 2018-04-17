@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import $ from 'jquery'
+import { Link } from 'react-router-dom'
 
 class Header extends Component {
   componentDidMount () {
@@ -18,19 +19,19 @@ class Header extends Component {
             <div className='col-md-8 footer-top animated wow fadeInRight' data-wow-duration='1000ms' data-wow-delay='500ms'>
               <ul className=' in'>
                 <li>
-                  <a href='index.html'>Home</a>
+                  <Link to='/'>Home</Link>
                 </li>
                 <li>
-                  <a href='menu.html'>Menu</a>
+                  <Link to='/menu'>Menu</Link>
                 </li>
                 <li>
-                  <a href='blog.html'>Blog</a>
+                  <Link to='/event'>Events</Link>
                 </li>
                 <li>
-                  <a href='events.html'>Events</a>
+                  <Link to='/contact'>Contact</Link>
                 </li>
                 <li>
-                  <a href='contact.html'>Contact</a>
+                  <Link to='/auth'>Login</Link>
                 </li>
               </ul>
               <span>There are many variations of passages</span>

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Cookery A Food Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+  <title>Cookery</title>
   <link href="/lib/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="/lib/js/jquery.min.js"></script>
@@ -12,8 +12,7 @@
   <!--//theme-style-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="keywords" content="Cookery Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+  <meta name="keywords" content="BK Food, Cookery, Back khoa, restaurant" />
   <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
   <!---->
   <link href='//fonts.googleapis.com/css?family=Raleway:400,200,100,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
@@ -45,37 +44,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <body>
 
-
   <div id="root"></div>
 
   <!--content-->
-
-  <script>
-    $(document).ready(function () {
-      $('#login-button').click(function () {
-        $('#login-button').fadeOut("slow", function () {
-          $("#container").fadeIn();
-          TweenMax.from("#container", .4, { scale: 0, ease: Sine.easeInOut });
-          TweenMax.to("#container", .4, { scale: 1, ease: Sine.easeInOut });
-        });
-      });
-
-      $(".close-btn").click(function () {
-        TweenMax.from("#container", .4, { scale: 1, ease: Sine.easeInOut });
-        TweenMax.to("#container", .4, { left: "0px", scale: 0, ease: Sine.easeInOut });
-        $("#container, #forgotten-container").fadeOut(800, function () {
-          $("#login-button").fadeIn(800);
-        });
-      });
-
-      /* Forgotten Password */
-      $('#forgotten').click(function () {
-        $("#container").fadeOut(function () {
-          $("#forgotten-container").fadeIn();
-        });
-      });
-    })
-  </script>
 </body>
 
 </html>
