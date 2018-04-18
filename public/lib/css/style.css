@@ -637,7 +637,8 @@ p.your-para{
 	background: #fff;
 }
 .contact-grid input[type="text"],
-.contact-grid input[type="password"]{
+.contact-grid input[type="password"],
+.contact-grid input[type="email"]{
 	width: 100%;
     padding: 0.6em 1em;
     outline: none;
