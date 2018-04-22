@@ -55,4 +55,9 @@ typings/
 build/
 
 package-lock.json
+<<<<<<< HEAD
+
+# IDE visual code
+=======
+>>>>>>> origin/dev
 .vscode/
