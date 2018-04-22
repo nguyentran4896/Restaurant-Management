@@ -2,7 +2,7 @@ import React from 'react'
 import R from 'ramda'
 import { connect } from 'react-redux'
 
-import Auth from 'components/pages/auth'
+import Auth from 'components/pages/login'
 
 const _isLogin = (Component) => (props) => {
   const { signedIn, ...others } = props
@@ -15,7 +15,7 @@ const _isLogin = (Component) => (props) => {
 }
 
 const mapStateToProps = (state) =>
-  ({ signedIn: R.path(['userLogin', 'signedIn'], state) })
+  ({ signedIn: R.path(['user', 'signedIn'], state) })
 
 export const isLogin = R.pipe(
   _isLogin,
