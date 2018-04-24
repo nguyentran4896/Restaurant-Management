@@ -8,7 +8,7 @@
     "lint": "node_modules/.bin/eslint .",
     "build": "webpack -p --config webpack.prod.config.js",
     "predeploy": "npm run lint && npm run build",
-    "deploy": "./scripts/deploy.ftp"
+    "deployCode": "./scripts/deploy.ftp"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",

@@ -2,6 +2,8 @@ import moment from 'moment'
 import md5 from 'md5'
 import Store from 'lib/Store'
 
+const apiDomainUrl = process.env.NODE_ENV === 'production' ? 'http://120.72.98.149:8000/website/v1/' : 'http://localhost:8000/website/v1/'
+
 export const makeHeader = _ => {
   let headers = {
     'Content-Type': 'application/json',
@@ -18,7 +20,7 @@ export const makeHeader = _ => {
 
 export const makePostRequestOptions = (params, url) => ({
   method: 'POST',
-  uri: 'http://localhost:8000/website/v1/' + url,
+  uri: apiDomainUrl + url,
   body: params,
   headers: makeHeader(),
   json: true
@@ -26,7 +28,7 @@ export const makePostRequestOptions = (params, url) => ({
 
 export const makeGetRequestOptions = (queries, url) => ({
   method: 'GET',
-  uri: 'http://localhost:8000/website/v1/' + url + queries,
+  uri: apiDomainUrl + url + queries,
   headers: makeHeader(),
   json: true
 })

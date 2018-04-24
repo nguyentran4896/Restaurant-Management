@@ -23,9 +23,8 @@ config.plugins = [
     }
   }),
   new HtmlWebpackPlugin({
-    template: 'assets/index.ejs',
-    hash: true, // Bust the cache in SCA hosting cloudflare
-    baseUrl: 'http://scfp.supplychainasia.org/'
+    template: 'assets/index.ejs'
+    // baseUrl: 'http://scfp.supplychainasia.org/'
   })
 ]
 
