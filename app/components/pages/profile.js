@@ -76,11 +76,11 @@ class Profile extends Component {
 
   handlePasswordChange(){
     if(this.state.passInput === '' || this.state.newPass === '' && this.state.confirmPass === '') {
-      showNotification('topRight', 'error', 'Input New Password, Confirm Password and Password is required!')
+      showNotification('topRight', 'error', 'Cần phải nhập Mật khẩu mới, Nhập lại mật khẩu mới và Mật khẩu hiện tại')
     } else if(md5(this.state.passInput) !== this.state.password) {
-      showNotification('topRight', 'error', 'Password incorrect!')
+      showNotification('topRight', 'error', 'Mật khẩu hiện tại không đúng')
     } else if(this.state.newPass !== this.state.confirmPass) {
-      showNotification('topRight', 'error', 'New password not match!')
+      showNotification('topRight', 'error', 'Mật khẩu mới không khớp')
     } else {
       var ok = confirm('Bạn có chắc chắn muốn cập nhật thông tin?');
       var self = this;
@@ -138,7 +138,7 @@ class Profile extends Component {
                       <div className='row'>
                         <div className='col-md-6'>
                           <div className='form-group label-floating'>
-                            <label className='control-label'>Full Name</label>
+                            <label className='control-label'>Tên</label>
                             <input type='text' className='form-control' value={this.state.name} onChange={this.handleNameChange} />
                           </div>
                         </div>
@@ -152,13 +152,13 @@ class Profile extends Component {
                       <div className='row'>
                         <div className='col-md-6'>
                           <div className='form-group label-floating'>
-                            <label className='control-label'>Birthday</label>
+                            <label className='control-label'>Ngày sinh</label>
                             <input type='date' className='form-control' value={moment(this.state.birthday).format('YYYY-MM-DD')}  onChange={this.handleBirthdayChange}/>
                           </div>
                         </div>
                         <div className='col-md-6'>
                           <div className='form-group label-floating'>
-                            <label className='control-label'>Gender</label>
+                            <label className='control-label'>Giới tính</label>
                             <select className='form-control' value={this.state.gender}  onChange={this.handleGenderChange}>
                             <option value=''>Chưa chọn</option>
                               <option value='Nam'>Nam</option>
@@ -170,7 +170,7 @@ class Profile extends Component {
                       <div className='row'>
                         <div className='col-md-6'>
                           <div className='form-group label-floating'>
-                            <label className='control-label'>Phone Number</label>
+                            <label className='control-label'>Số điện thoại</label>
                             <input type='text' className='form-control' value={this.state.phoneNumber}  onChange={this.handlePhoneNumberChange} />
                           </div>
                         </div>
@@ -187,13 +187,13 @@ class Profile extends Component {
                         <div className='row'>
                         <div className='col-md-6'>
                           <div className='form-group label-floating'>
-                            <label className='control-label'>New Password</label>
+                            <label className='control-label'>Mật khẩu mới</label>
                             <input type='password' className='form-control' value={this.state.newPass} onChange={this.handleNewPassChange} />
                           </div>
                         </div>
                         <div className='col-md-6'>
                           <div className='form-group label-floating'>
-                            <label className='control-label'>Confirm Password</label>
+                            <label className='control-label'>Nhập lại mật khẩu mới</label>
                             <input type='password' className='form-control' value={this.state.confirmPass} onChange={this.handleConfirmPassChange} />
                           </div>
                         </div>
@@ -203,14 +203,14 @@ class Profile extends Component {
                         <div className='row'>
                         <div className='col-md-6'>
                           <div className='form-group label-floating'>
-                            <label className='control-label'>Password</label>
+                            <label className='control-label'>Mật khẩu hiện tại</label>
                             <input type='password' className='form-control' value={this.state.passInput}  onChange={this.handlePassInputChange} />
                           </div>
                         </div>
                         <div className='col-md-6'>
                           <div className='form-group label-floating'>
                             <label className='control-label'>&nbsp;</label>
-                            <button className='btn btn-danger form-control' type="button" onClick={this.handlePasswordChange}>Change Password</button>
+                            <button className='btn btn-danger form-control' type="button" onClick={this.handlePasswordChange}>Đổi mật khẩu</button>
                           </div>
                         </div>
                       </div>
@@ -218,11 +218,11 @@ class Profile extends Component {
                       <div className='row' >
                         <div className='col-md-6'>
                           <div className='form-group'>
-                            <button type='button' className='btn btn-default form-control pull-right' onClick={this.resetForm} >Reset Input</button>
+                            <button type='button' className='btn btn-default form-control pull-right' onClick={this.resetForm} >Làm mới</button>
                           </div>
                         </div>
                         <div className='col-md-6'>
-                          <button type='button' className='btn btn-primary form-control pull-right' onClick={this.handleSubmitForm}>Update Profile</button>
+                          <button type='button' className='btn btn-primary form-control pull-right' onClick={this.handleSubmitForm}>Cập nhật hồ sơ</button>
                         </div>
                       </div>
                       <div className='clearfix'></div>
