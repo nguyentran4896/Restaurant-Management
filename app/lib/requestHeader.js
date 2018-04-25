@@ -11,7 +11,7 @@ export const makeHeader = _ => {
     'X-API-Language': 'en',
     'Uid': '',
     'Token': '',
-    'Vid': ''
+    'Vid': 123
   }
 
   headers['Authorization'] = md5(md5(headers['Token'] + headers['Uid'] + headers['Date-Time']))

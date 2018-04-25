@@ -1,10 +1,8 @@
 import { SubmissionError } from 'redux-form'
 import request from 'request-promise'
-
 import { makePostRequestOptions } from '../requestHeader'
 import { userHasSignedIn } from 'ducks/user'
 import { showNotification } from './showNotification'
-import Navigator from 'lib/Navigator'
 // Redux-form requires a promise for async submission
 // so we return a promise
 export const submitLogin =

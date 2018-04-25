@@ -1,6 +1,6 @@
 import hydration from 'ducks/hydration'
 import user from 'ducks/user'
-import notification from 'ducks/notification'
+
 import food from 'ducks/food'
 import order from 'ducks/order'
 import zone from 'ducks/zone'

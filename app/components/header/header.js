@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import $ from 'jquery'
 import CartItem from 'components/header/element/cart-item'
+import { userHasSignedOut } from 'ducks/user'
 import 'styles/header.css'
 
 class Header extends Component {
@@ -11,6 +12,7 @@ class Header extends Component {
     this.state = {
       isOpenCart: false
     }
+    this.handleLogout = this.handleLogout.bind(this)
   }
 
   toggleCart() {
@@ -25,6 +27,13 @@ class Header extends Component {
       $(this).toggleClass('navicon--active')
       $('.toggle').toggleClass('toggle--active')
     })
+  }
+
+  handleLogout(){
+    var ok = confirm('Bạn có chắc muốn thoát?');
+    if(ok) {
+      this.props.dispatch(userHasSignedOut())
+    }
   }
 
   render() {
@@ -51,7 +60,18 @@ class Header extends Component {
                 <li><Link to='/map'>Map</Link></li>
                 <li><Link to='/event'>Events</Link></li>
                 <li><Link to='/contact'>Contact</Link></li>
-                <li><Link to='/login'>Login</Link></li>
+                {
+                  !user.signedIn &&
+                  <li><Link to='/login'>Login</Link></li>
+                }
+                {
+                  user.signedIn &&
+                  <li><Link to='/profile'>{user.data.name}</Link></li> 
+                }
+                {
+                  user.signedIn &&
+                  <li><a href='javascript:;' onClick={this.handleLogout}>Logout</a></li>
+                }
               </ul>
             </div>
           </div>

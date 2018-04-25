@@ -2,12 +2,18 @@ import React, { Component } from 'react'
 import { reduxForm } from 'redux-form'
 import { Link } from 'react-router-dom'
 import LoginForm from 'components/form/Login'
+import { connect } from 'react-redux'
 import { submitLogin } from '../../lib/actions/submit'
-
 import 'styles/auth.css'
 
 class LogIn extends Component {
   render() {
+    const { signedIn } = this.props
+    if(signedIn) {
+      return (
+        <h1>Đã login</h1>
+      )
+    }
     return (
       <div className='auth-page container-fluid'>
         <div id='container'>
@@ -27,6 +33,7 @@ class LogIn extends Component {
     )
   }
 }
+
 
 // Decorate LoginForm so that form is pure
 const DecoratedLoginForm = reduxForm({
