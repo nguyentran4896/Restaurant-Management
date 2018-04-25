@@ -254,7 +254,7 @@ class Profile extends Component {
                 </div>
               </div>
             </div>
-            <div class='row'>
+            <div className='row'>
               <h3>Lịch sử thanh toán</h3>
               <hr/>
               <table className='table table-hover'>
