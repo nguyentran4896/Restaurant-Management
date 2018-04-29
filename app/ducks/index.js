@@ -4,11 +4,13 @@ import user from 'ducks/user'
 import food from 'ducks/food'
 import order from 'ducks/order'
 import zone from 'ducks/zone'
+import event from 'ducks/event'
 
 export default {
   hydration,
   user,
   food,
   order,
-  zone
+  zone,
+  event
 }
