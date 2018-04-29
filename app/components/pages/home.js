@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class Header extends Component {
   render () {
@@ -285,6 +286,19 @@ class Header extends Component {
                   </a>
                 </div>
                 <div className='clearfix' />
+
+                <div className='read-more'>
+                  <Link className='link link-yaku' to='event'>
+                    <span>X</span>
+                    <span>e</span>
+                    <span>m</span>
+                    <span>&nbsp;</span>
+                    <span>t</span> 
+                    <span>h</span>
+                    <span>ê</span>
+                    <span>m</span>
+                  </Link>
+                </div>
               </div>
 
             </div>

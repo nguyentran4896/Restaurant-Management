@@ -57,7 +57,6 @@ class Header extends Component {
               <ul className='toggle-menu'>
                 <li><Link to='/'>Home</Link></li>
                 <li><Link to='/menu'>Menu</Link></li>
-                <li><Link to='/map'>Map</Link></li>
                 <li><Link to='/event'>Events</Link></li>
                 <li><Link to='/contact'>Contact</Link></li>
                 {
