@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getEvents } from 'lib/actions/event'
+import R from 'ramda'
 
 class Event extends Component {
   componentDidMount() {
     this.props.dispatch(getEvents())
   }
-  render () {
+  render() {
     const { eventState, dispatch } = this.props
     return (
       <div className='content'>
@@ -27,19 +28,31 @@ class Event extends Component {
               <div className='clearfix' />
             </div>
 
-            <div className='events-bottom'>
-              <div className='col-md-5 events-bottom1 animated wow fadeInRight' data-wow-duration='1000ms' data-wow-delay='500ms'>
-                <a href='single.html'><img src='lib/images/ev.jpg' alt='' className='img-responsive' /></a>
-              </div>
-              <div className='col-md-7 events-bottom2 animated wow fadeInLeft' data-wow-duration='1000ms' data-wow-delay='500ms'>
-                <h3>At vero eos et</h3>
-                <label><i className='glyphicon glyphicon-menu-up' /></label>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-                </p>
-              </div>
-              <div className='clearfix' />
-            </div>
+            {eventState.items.map((item, i) => {
+              return (
+                <div className='events-bottom' key={i}>
+                  {(!i % 2) ?
+                    <div className='col-md-5 events-bottom1 animated wow fadeInRight' data-wow-duration='1000ms' data-wow-delay='500ms'>
+                      <img src={R.values(item.imageUrl)[0]} alt='' className='img-responsive' />
+                    </div> : ''
+                  }
+
+                  <div className='col-md-7 events-bottom2 animated wow fadeInLeft' data-wow-duration='1000ms' data-wow-delay='500ms'>
+                    <h3>{item.name}</h3>
+                    <label><i className='glyphicon glyphicon-menu-up' /></label>
+                    <p dangerouslySetInnerHTML={{ __html: item.description }}></p>
+                  </div>
+
+                  {(i % 2) ?
+                    <div className='col-md-5 events-bottom1 animated wow fadeInRight' data-wow-duration='1000ms' data-wow-delay='500ms'>
+                      <img src={R.values(item.imageUrl)[0]} alt='' className='img-responsive' />
+                    </div> : ''
+                  }
+
+                  <div className='clearfix' />
+                </div>
+              )
+            })}
 
           </div>
         </div>

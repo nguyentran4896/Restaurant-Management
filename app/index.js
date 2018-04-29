@@ -19,6 +19,7 @@ import Contact from 'components/pages/contact.js'
 import LogIn from 'components/pages/login.js'
 import SignUp from 'components/pages/signup.js'
 import Profile from 'components/pages/profile.js'
+import 'styles/website.less'
 
 const ZoomInAndOut = ({ children, position, ...props }) => (
   <Transition
