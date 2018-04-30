@@ -19,30 +19,29 @@ class Header extends Component {
             <div className='col-md-8 footer-top animated wow fadeInRight' data-wow-duration='1000ms' data-wow-delay='500ms'>
               <ul className=' in'>
                 <li>
-                  <Link to='/'>Home</Link>
+                  <Link to='/'>Trang chủ</Link>
                 </li>
                 <li>
-                  <Link to='/menu'>Menu</Link>
+                  <Link to='/menu'>Thực đơn</Link>
                 </li>
                 <li>
-                  <Link to='/event'>Events</Link>
+                  <Link to='/event'>Tin tức</Link>
                 </li>
                 <li>
-                  <Link to='/contact'>Contact</Link>
+                  <Link to='/contact'>Liên hệ</Link>
                 </li>
                 <li>
-                  <Link to='/auth'>Login</Link>
+                  <Link to='/auth'>Đăng nhập</Link>
                 </li>
               </ul>
-              <span>There are many variations of passages</span>
+              <span>Khách hàng luôn là mục tiêu phục vụ của chúng tôi!</span>
             </div>
             <div className='col-md-4 footer-bottom  animated wow fadeInLeft' data-wow-duration='1000ms' data-wow-delay='500ms'>
-              <h2>Follow Us</h2>
+              <h2>Theo dõi</h2>
               <label>
                 <i className='glyphicon glyphicon-menu-up' />
               </label>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-              aliqua. Ut enim ad minim veniam, quis.</p>
+              <p>Kết nối ngay trên mạng xã hội để không bỏ lỡ nhưng khuyến mãi hấp dẫn nhất</p>
               <ul className='social-ic'>
                 <li>
                   <a href='#'>

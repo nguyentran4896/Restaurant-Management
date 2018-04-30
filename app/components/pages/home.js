@@ -18,18 +18,15 @@ class Header extends Component {
           <div className='container'>
             <div className='content-top'>
               <div className='col-md-4 content-left animated wow fadeInLeft' data-wow-duration='1000ms' data-wow-delay='500ms'>
-                <h3>About</h3>
+                <h3>Thực đơn</h3>
                 <label>
                   <i className='glyphicon glyphicon-menu-up' />
                 </label>
-                <span>There are many variations</span>
+                <span>Thực đơn đa dạng, phong phú</span>
               </div>
               <div className='col-md-8 content-right animated wow fadeInRight' data-wow-duration='1000ms' data-wow-delay='500ms'>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
-              some form, by injected humour , or randomised words which don't look even slightly believable.There are many
-              variations by injected humour. There are many variations of passages of Lorem Ipsum available.There are many
-              variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form by
-              injected humour , or randomised words</p>
+                <p>Thưởng thức đặc sản truyền thống cùng các món ăn Tây phương trong một không gian ấm cúng, sang trọng, tiện nghi
+                  với hệ thống hút mùi tiêu chuẩn Hà Quốc sẽ là một trải nghiệm tuyệt vời bên gia đình, bạn bè.</p>
               </div>
               <div className='clearfix' />
             </div>
@@ -56,8 +53,6 @@ class Header extends Component {
                   </div>
                 )
               })}
-
-
               <div className='clearfix' />
             </div>
           </div>
@@ -66,18 +61,14 @@ class Header extends Component {
           <div className='container'>
             <div className='services-top'>
               <div className='col-md-8 services-right animated wow fadeInLeft' data-wow-duration='1000ms' data-wow-delay='500ms'>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
-              some form, by injected humour , or randomised words which don't look even slightly believable.There are many
-              variations by injected humour. There are many variations of passages of Lorem Ipsum available.There are many
-              variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form by
-              injected humour , or randomised words</p>
+                <p>Đội ngũ nhân viên được đào tạo bài bản chuyên nghiệp với thái độ phục vụ thân thiện, nhiệt tình chắc chắn sẽ thổi hồn vào cho không gian ấm áp này</p>
               </div>
               <div className='col-md-4 services-left animated wow fadeInRight' data-wow-duration='1000ms' data-wow-delay='500ms'>
-                <h3>Services</h3>
+                <h3>Dịch vụ</h3>
                 <label>
                   <i className='glyphicon glyphicon-menu-up' />
                 </label>
-                <span>There are many variations</span>
+                <span>Cung cấp trải nghiệm tốt nhất</span>
               </div>
               <div className='clearfix' />
             </div>
@@ -86,12 +77,12 @@ class Header extends Component {
                 <div className=' service-grid'>
                   <div className='col-md-6 service-grid1'>
                     <div className='hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a'>
-                      <a href='#' className='hi-icon hi-icon-mobile glyphicon glyphicon-leaf' />
+                      <a href='#' className='hi-icon hi-icon-mobile glyphicon glyphicon-shopping-cart' />
                     </div>
                   </div>
                   <div className='col-md-6 service-grid1'>
                     <div className='hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a'>
-                      <a href='#' className='hi-icon hi-icon-mobile glyphicon glyphicon-star-empty' />
+                      <a href='#' className='hi-icon hi-icon-mobile glyphicon glyphicon-thumbs-up' />
                     </div>
                   </div>
                   <div className='clearfix' />
@@ -99,7 +90,7 @@ class Header extends Component {
                 <div className=' service-grid'>
                   <div className='col-md-6 service-grid1'>
                     <div className='hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a'>
-                      <a href='#' className='hi-icon hi-icon-mobile glyphicon glyphicon-folder-open' />
+                      <a href='#' className='hi-icon hi-icon-mobile glyphicon glyphicon-grain' />
                     </div>
                   </div>
                   <div className='col-md-6 service-grid1'>
@@ -117,9 +108,9 @@ class Header extends Component {
                     <img src='/lib/images/sa.jpg' className='img-responsive' alt='' />
                   </div>
                   <div className='ser-top '>
-                    <h5>Beautiful &amp; enjoyable designs</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua. Ut enim ad minim veniam, quis.</p>
+                    <h5>Đặt món giao tận nơi nhanh chóng</h5>
+                    <p>Chỉ với vài thao tác nhỏ. Bạn đã được phục vụ nhanh chóng những món ăn hấp dẫn mà không
+                      cần phải đến trực tiếp nhà hàng</p>
                   </div>
                   <div className='clearfix' />
                 </div>
@@ -128,9 +119,9 @@ class Header extends Component {
                     <img src='/lib/images/sa1.jpg' className='img-responsive' alt='' />
                   </div>
                   <div className='ser-top '>
-                    <h5>Beautiful &amp; enjoyable designs</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua. Ut enim ad minim veniam, quis.</p>
+                    <h5>Dịch vụ tốt nhất</h5>
+                    <p>Đội ngũ nhân viên được đào tạo bài bản chuyên nghiệp với thái độ phục vụ thân thiện,
+                      nhiệt tình chắc chắn sẽ thổi hồn vào cho không gian ấm áp này</p>
                   </div>
                   <div className='clearfix' />
                 </div>
@@ -139,9 +130,10 @@ class Header extends Component {
                     <img src='/lib/images/sa2.jpg' className='img-responsive' alt='' />
                   </div>
                   <div className='ser-top '>
-                    <h5>Beautiful &amp; enjoyable designs</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua. Ut enim ad minim veniam, quis.</p>
+                    <h5>Thực phẩm sạch, an toàn tuyệt đối</h5>
+                    <p>Nguồn thực phẩm luôn được kiểm tra và khép kín từ khâu nuôi trồng đến khâu chế biến.
+                      Mang đến cho khách hàng sự yên tâm tuyệt đối về chất lượng các món ăn.
+                    </p>
                   </div>
                   <div className='clearfix' />
                 </div>
@@ -154,16 +146,16 @@ class Header extends Component {
           <div className='container'>
             <div className='content-top'>
               <div className='col-md-4 content-left animated wow fadeInLeft' data-wow-duration='1000ms' data-wow-delay='500ms'>
-                <h3>News</h3>
+                <h3>Tin tức & khuyến mãi</h3>
                 <label>
                   <i className='glyphicon glyphicon-menu-up' />
                 </label>
-                <span>There are many variations</span>
+                <span>Mang thế giới ẩm thực đến gần bạn hơn</span>
               </div>
               <div className='col-md-8 content-right animated wow fadeInRight' data-wow-duration='1000ms' data-wow-delay='500ms'>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
-              some form, by injected humour , or randomised words which don't look even slightly believable.There are many
-              variations by injected humour. </p>
+                <p>Cập nhật hàng ngày những tin tức ẩm thực nóng hổi, những khuyến mãi hấp dẫn của nhà hàng
+                  cũng như những món ăn, mẹo nấu nướng không thể bỏ qua
+                </p>
               </div>
               <div className='clearfix' />
             </div>

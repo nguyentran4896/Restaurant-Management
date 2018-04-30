@@ -55,13 +55,13 @@ class Header extends Component {
             <a href='#' className='navicon' />
             <div className='toggle'>
               <ul className='toggle-menu'>
-                <li><Link to='/'>Home</Link></li>
-                <li><Link to='/menu'>Menu</Link></li>
-                <li><Link to='/event'>Events</Link></li>
-                <li><Link to='/contact'>Contact</Link></li>
+                <li><Link to='/'>Trang chủ</Link></li>
+                <li><Link to='/menu'>Thực đơn</Link></li>
+                <li><Link to='/event'>Tin tức</Link></li>
+                <li><Link to='/contact'>Liên hệ</Link></li>
                 {
                   !user.signedIn &&
-                  <li><Link to='/login'>Login</Link></li>
+                  <li><Link to='/login'>Đăng nhập</Link></li>
                 }
                 {
                   user.signedIn &&
@@ -69,7 +69,7 @@ class Header extends Component {
                 }
                 {
                   user.signedIn &&
-                  <li><a href='javascript:;' onClick={this.handleLogout}>Logout</a></li>
+                  <li><a href='javascript:;' onClick={this.handleLogout}>Đăng xuất</a></li>
                 }
               </ul>
             </div>
