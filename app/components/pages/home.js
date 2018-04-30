@@ -1,8 +1,15 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-
+import { getEvents } from 'lib/actions/event'
+import R from 'ramda'
+import moment from 'moment'
 class Header extends Component {
-  render () {
+  componentDidMount() {
+    this.props.dispatch(getEvents())
+  }
+  render() {
+    const { eventState } = this.props
     return (
       <div className='content' id='content-down'>
         <div className='content-top-top'>
@@ -170,121 +177,37 @@ class Header extends Component {
               <div className='col-md-8 content-right animated wow fadeInRight' data-wow-duration='1000ms' data-wow-delay='500ms'>
                 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
               some form, by injected humour , or randomised words which don't look even slightly believable.There are many
-              variations by injected humour. There are many variations of passages of Lorem Ipsum available.There are many
-              variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form by
-              injected humour , or randomised words</p>
+              variations by injected humour. </p>
               </div>
               <div className='clearfix' />
             </div>
             <div className='news-bottom'>
               <div className='news-bot'>
-                <div className='col-md-6 news-bottom1 animated wow fadeInUp' data-wow-duration='1000ms' data-wow-delay='500ms'>
-                  <a href='single.html'>
-                    <div className='content-item'>
-                      <div className='overlay' />
-                      <div className=' news-bottom2'>
-                        <ul className='grid-news'>
-                          <li>
-                            <span>
-                              <i className='glyphicon glyphicon-calendar' />08.09.2014</span>
-                            <b>/</b>
-                          </li>
-                          <li>
-                            <span>
-                              <i className='glyphicon glyphicon-comment' />5 Comment</span>
-                            <b>/</b>
-                          </li>
-                          <li>
-                            <span>
-                              <i className='glyphicon glyphicon-share' />Share</span>
-                          </li>
-                        </ul>
-                        <p>There are many variations of passages of Lorem Ipsum available</p>
-                      </div>
+                {eventState.items.map((item, i) => {
+                  return (
+                    <div className='col-md-6 news-bottom1'>
+                      <a href='single.html'>
+                        <div className='content-item content-item2 animated wow fadeInLeft' data-wow-duration='1000ms' data-wow-delay='500ms'>
+                          <div className='overlay' />
+                          <div className=' news-bottom2'>
+                            <ul className='grid-news'>
+                              <li>
+                                <span>
+                                  <i className='glyphicon glyphicon-calendar' />{moment.utc(item.start).format('DD-MM-YYYY')}</span>
+                                <b>-</b>
+                              </li>
+                              <li>
+                                <span>
+                                  <i className='glyphicon glyphicon-calendar' />{moment.utc(item.end).format('DD-MM-YYYY')}</span>
+                              </li>
+                            </ul>
+                            <p>{item.name}</p>
+                          </div>
+                        </div>
+                      </a>
                     </div>
-                  </a>
-                </div>
-                <div className='col-md-6 news-bottom1 animated wow fadeInRight' data-wow-duration='1000ms' data-wow-delay='500ms'>
-                  <a href='single.html'>
-                    <div className='content-item content-item1'>
-                      <div className='overlay' />
-                      <div className=' news-bottom2'>
-                        <ul className='grid-news'>
-                          <li>
-                            <span>
-                              <i className='glyphicon glyphicon-calendar' />08.09.2014</span>
-                            <b>/</b>
-                          </li>
-                          <li>
-                            <span>
-                              <i className='glyphicon glyphicon-comment' />5 Comment</span>
-                            <b>/</b>
-                          </li>
-                          <li>
-                            <span>
-                              <i className='glyphicon glyphicon-share' />Share</span>
-                          </li>
-                        </ul>
-                        <p>There are many variations of passages of Lorem Ipsum available</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div className='clearfix' />
-              </div>
-              <div className='news-bot'>
-                <div className='col-md-6 news-bottom1'>
-                  <a href='single.html'>
-                    <div className='content-item content-item2 animated wow fadeInLeft' data-wow-duration='1000ms' data-wow-delay='500ms'>
-                      <div className='overlay' />
-                      <div className=' news-bottom2'>
-                        <ul className='grid-news'>
-                          <li>
-                            <span>
-                              <i className='glyphicon glyphicon-calendar' />08.09.2014</span>
-                            <b>/</b>
-                          </li>
-                          <li>
-                            <span>
-                              <i className='glyphicon glyphicon-comment' />5 Comment</span>
-                            <b>/</b>
-                          </li>
-                          <li>
-                            <span>
-                              <i className='glyphicon glyphicon-share' />Share</span>
-                          </li>
-                        </ul>
-                        <p>There are many variations of passages of Lorem Ipsum available</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div className='col-md-6 news-bottom1 animated wow fadeInDown' data-wow-duration='1000ms' data-wow-delay='500ms'>
-                  <a href='single.html'>
-                    <div className='content-item content-item3'>
-                      <div className='overlay' />
-                      <div className=' news-bottom2'>
-                        <ul className='grid-news'>
-                          <li>
-                            <span>
-                              <i className='glyphicon glyphicon-calendar' />08.09.2014</span>
-                            <b>/</b>
-                          </li>
-                          <li>
-                            <span>
-                              <i className='glyphicon glyphicon-comment' />5 Comment</span>
-                            <b>/</b>
-                          </li>
-                          <li>
-                            <span>
-                              <i className='glyphicon glyphicon-share' />Share</span>
-                          </li>
-                        </ul>
-                        <p>There are many variations of passages of Lorem Ipsum available</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
+                  )
+                })}
                 <div className='clearfix' />
 
                 <div className='read-more'>
@@ -293,7 +216,7 @@ class Header extends Component {
                     <span>e</span>
                     <span>m</span>
                     <span>&nbsp;</span>
-                    <span>t</span> 
+                    <span>t</span>
                     <span>h</span>
                     <span>ê</span>
                     <span>m</span>
@@ -309,4 +232,8 @@ class Header extends Component {
   }
 }
 
-export default Header
+const mapStateToProps = state => ({
+  eventState: state.event
+})
+
+export default connect(mapStateToProps)(Header)
