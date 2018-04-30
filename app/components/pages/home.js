@@ -2,14 +2,16 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { getEvents } from 'lib/actions/event'
+import { getFoods } from 'lib/actions/food'
 import R from 'ramda'
 import moment from 'moment'
 class Header extends Component {
   componentDidMount() {
     this.props.dispatch(getEvents())
+    this.props.dispatch(getFoods())
   }
   render() {
-    const { eventState } = this.props
+    const { eventState, foodState } = this.props
     return (
       <div className='content' id='content-down'>
         <div className='content-top-top'>
@@ -33,45 +35,29 @@ class Header extends Component {
             </div>
             <div className='content-mid'>
 
-              <div className='col-md-4 food-grid animated wow fadeInUp' data-wow-duration='1000ms' data-wow-delay='500ms'>
-                <div className=' hover-fold'>
-                  <h4>FOOD</h4>
-                  <div className='top'>
-                    <div className='front face' />
-                    <div className='back face'>
-                      <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-                    in some form, by injected humour</p>
+              {foodState.items.map((item, i) => {
+                return (
+                  <div className='col-md-4 food-grid animated wow fadeInUp'
+                    data-wow-duration='1000ms' data-wow-delay='500ms' key={i}>
+                    <div className=' hover-fold'>
+                      <h4>{item.name.toUpperCase()}</h4>
+                      <div className='top'>
+                        <div className='front face'
+                          style={{ background: 'url(' + R.values(item.imageUrl)[0] + ') top' }}
+                        />
+                        <div className='back face'>
+                          <p>{item.description}</p>
+                        </div>
+                      </div>
+                      <div className='bottom'
+                        style={{ background: 'url(' + R.values(item.imageUrl)[0] + ') bottom' }}
+                      />
                     </div>
                   </div>
-                  <div className='bottom' />
-                </div>
-              </div>
-              <div className='col-md-4 food-grid animated wow fadeInLeft' data-wow-duration='1000ms' data-wow-delay='500ms'>
-                <div className=' hover-fold'>
-                  <h4>FOOD</h4>
-                  <div className='top'>
-                    <div className='front face front1' />
-                    <div className='back face'>
-                      <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-                    in some form, by injected humour</p>
-                    </div>
-                  </div>
-                  <div className='bottom bottom1' />
-                </div>
-              </div>
-              <div className='col-md-4 food-grid animated wow fadeInDown' data-wow-duration='1000ms' data-wow-delay='500ms'>
-                <div className=' hover-fold'>
-                  <h4>FOOD</h4>
-                  <div className='top'>
-                    <div className='front face front2' />
-                    <div className='back face'>
-                      <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-                    in some form, by injected humour</p>
-                    </div>
-                  </div>
-                  <div className='bottom bottom2' />
-                </div>
-              </div>
+                )
+              })}
+
+
               <div className='clearfix' />
             </div>
           </div>
@@ -185,7 +171,7 @@ class Header extends Component {
               <div className='news-bot'>
                 {eventState.items.map((item, i) => {
                   return (
-                    <div className='col-md-6 news-bottom1'>
+                    <div className='col-md-6 news-bottom1' key={i}>
                       <a href='single.html'>
                         <div className='content-item content-item2 animated wow fadeInLeft' data-wow-duration='1000ms' data-wow-delay='500ms'>
                           <div className='overlay' />
@@ -233,7 +219,8 @@ class Header extends Component {
 }
 
 const mapStateToProps = state => ({
-  eventState: state.event
+  eventState: state.event,
+  foodState: state.food
 })
 
 export default connect(mapStateToProps)(Header)

@@ -90,7 +90,7 @@ i.glyphicon.glyphicon-menu-hamburger {
 /*--content--*/
 .hover-fold {
   background:#005238;
-  height: 300px;
+  height: 350px;
   margin: 0px auto;
   -moz-perspective: 1500;
   -webkit-perspective: 1500;
@@ -145,6 +145,8 @@ i.glyphicon.glyphicon-menu-hamburger {
   height: 100%;
   /*has to be 100% of .top */
   width: 100%;
+  background-size: 350px 350px!important;
+  background-repeat: no-repeat;
 }
 .hover-fold .back {
   background: #005238;
@@ -170,19 +172,10 @@ i.glyphicon.glyphicon-menu-hamburger {
   top: 50%;
   width: 100%;
   z-index: 0;
+  background-size: 350px 350px!important;
+  background-repeat: no-repeat;
 }
-.hover-fold .front1 {
-  background: url(../images/aa1.jpg) top;
-}
-.hover-fold .bottom1{
-  background: url(../images/aa1.jpg) bottom;
-}
-.hover-fold .front2 {
-  background: url(../images/aa2.jpg) top;
-}
-.hover-fold .bottom2{
-  background: url(../images/aa2.jpg) bottom;
-}
+
 /*--content--*/
 .content-top-top {
     padding: 6em 0;
