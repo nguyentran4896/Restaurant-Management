@@ -56,32 +56,33 @@ class Contact extends Component {
           <div className='container'>
             <div className='menu-top'>
               <div className='col-md-4 menu-left animated wow fadeInLeft' data-wow-duration='1000ms' data-wow-delay='500ms'>
-                <h3>Contact</h3>
+                <h3>Liên hệ</h3>
                 <label><i className='glyphicon glyphicon-menu-up' /></label>
-                <span>There are many variations</span>
+                <span>Để lại lời nhắn cho chúng tôi</span>
               </div>
               <div className='col-md-8 menu-right animated wow fadeInRight' data-wow-duration='1000ms' data-wow-delay='500ms'>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour , or randomised words which don't look even slightly believable.There are many variations by injected humour. There are many variations of passages of Lorem Ipsum available.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form by injected humour , or randomised words</p>
+                <p>Những đóng góp, góp ý của các bạn chính là động lực để chúng tôi ngày càng hoàn thiện dịch vụ, phát triển hơn
+                  để phục vụ tốt nhất cho khách hàng.
+                </p>
               </div>
               <div className='clearfix' />
             </div>
             <div className='col-md-7 contact-para animated wow fadeInDown' data-wow-duration='1000ms' data-wow-delay='500ms'>
-              <h5>Contact Form</h5>
               <form >
                 <div className='grid-contact'>
                   <div className='col-md-6 contact-grid'>
-                    <p className='your-para'>Name </p>
+                    <p className='your-para'>Tên</p>
                     <input type='text' name='name' onChange={this.handleNameChange} />
                   </div>
                   <div className='col-md-6 contact-grid'>
-                    <p className='your-para'>Phone number</p>
+                    <p className='your-para'>Số điện thoại</p>
                     <input type='text' name='phoneNumber' onChange={this.handlePhoneNumberChange}  />
                   </div>
                   <div className='clearfix' />
                 </div>
                 <div className='grid-contact'>
                   <div className='col-md-6 contact-grid'>
-                    <p className='your-para'>Address</p>
+                    <p className='your-para'>Địa chỉ</p>
                     <input type='text'  name='address' onChange={this.handleAddressChange}  />
                   </div>
                   <div className='col-md-6 contact-grid'>
@@ -92,8 +93,8 @@ class Contact extends Component {
                 </div>
                 <p className='your-para msg-para'>MESSAGE</p>
                 <textarea cols='77' name='message'  rows='6' onChange={this.handleMessageChange}  />
-                <div className='send'>
-                  <input type='button' onClick={this.onSubmit} defaultValue='Send ' />
+                <div className='send pull-right'>
+                  <input type='button' onClick={this.onSubmit} defaultValue='Gửi' />
                 </div>
               </form>
             </div>

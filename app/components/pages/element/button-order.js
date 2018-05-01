@@ -15,7 +15,7 @@ class ButtonOrder extends Component {
         e.preventDefault();
         this.submitOrder(foodState, user, dispatch)
       }}>
-      Order
+      Đặt món
       </div>
     )
   }

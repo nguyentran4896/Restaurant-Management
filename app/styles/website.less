@@ -5,3 +5,33 @@
         object-position: center;
     }
 }
+
+.send input {
+    width: 100px;
+    height: 50px;
+    background-color: #005238;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+  
+    -webkit-transition: box-shadow 0.2s ease;
+    -moz-transition: box-shadow 0.2s ease;
+    transition: box-shadow 0.2s ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .send input:hover {
+    box-shadow: 0 0 0 3px #97824b;
+  }
+  .send input:hover:before {
+    -webkit-transform: scale(0.925);
+    -moz-transform: scale(0.925);
+    -ms-transform: scale(0.925);
+    -o-transform: scale(0.925);
+    transform: scale(0.925);
+    box-shadow: 0 0 0 1px #97824b;
+  }

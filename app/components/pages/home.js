@@ -26,12 +26,11 @@ class Header extends Component {
               </div>
               <div className='col-md-8 content-right animated wow fadeInRight' data-wow-duration='1000ms' data-wow-delay='500ms'>
                 <p>Thưởng thức đặc sản truyền thống cùng các món ăn Tây phương trong một không gian ấm cúng, sang trọng, tiện nghi
-                  với hệ thống hút mùi tiêu chuẩn Hà Quốc sẽ là một trải nghiệm tuyệt vời bên gia đình, bạn bè.</p>
+                  với hệ thống hút mùi tiêu chuẩn Hàn Quốc sẽ là một trải nghiệm tuyệt vời bên gia đình, bạn bè.</p>
               </div>
               <div className='clearfix' />
             </div>
             <div className='content-mid'>
-
               {foodState.items.map((item, i) => {
                 return (
                   <div className='col-md-4 food-grid animated wow fadeInUp'

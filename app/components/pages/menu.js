@@ -17,14 +17,17 @@ class Menu extends Component {
       <div className='content'>
         <div className='menu'>
           <div className='container'>
-            <div className='menu-top'>
-              <div className='col-md-4 menu-left animated wow fadeInLeft' data-wow-duration='700ms' data-wow-delay='500ms'>
-                <h3>Menu</h3>
-                <label><i className='glyphicon glyphicon-menu-up' /></label>
-                <span>There are many variations</span>
+            <div className='content-top'>
+              <div className='col-md-4 content-left animated wow fadeInLeft' data-wow-duration='1000ms' data-wow-delay='500ms'>
+                <h3>Thực đơn</h3>
+                <label>
+                  <i className='glyphicon glyphicon-menu-up' />
+                </label>
+                <span>Thực đơn đa dạng, phong phú</span>
               </div>
-              <div className='col-md-8 menu-right animated wow fadeInRight' data-wow-duration='700ms' data-wow-delay='500ms'>
-                <p>There are many variations of passages of Lorem Ipsum available. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form by injected humour , or randomised words</p>
+              <div className='col-md-8 content-right animated wow fadeInRight' data-wow-duration='1000ms' data-wow-delay='500ms'>
+                <p>Thưởng thức đặc sản truyền thống cùng các món ăn Tây phương trong một không gian ấm cúng, sang trọng, tiện nghi
+                  với hệ thống hút mùi tiêu chuẩn Hàn Quốc sẽ là một trải nghiệm tuyệt vời bên gia đình, bạn bè.</p>
               </div>
               <div className='clearfix' />
             </div>

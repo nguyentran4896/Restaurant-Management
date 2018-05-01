@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import R from 'ramda'
 
 // We receive props from ReduxForm's Field
 // and turn them into props for Bootstrap forms
@@ -14,7 +15,7 @@ class FoodItem extends Component {
     return (
       <div className='col-md-4 menu-bottom1'>
         <div className='btm-right' style={{ marginTop: '30px' }}>
-          <img src='/lib/images/me.jpg' alt='' className='img-responsive' />
+          <img src={R.values(food.imageUrl)[0]} alt='' className='img-responsive' />
           <div className={'captn' + (food.quantity ? ' active' : '')} >
             <h4>{food.name}</h4>
             <p>{parseToMoney(food.currentPrice)}</p>
