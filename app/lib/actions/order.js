@@ -31,7 +31,7 @@ export const submitOrder = (foodState, user, dispatch) => {
   var key, order;
   firebase.database().ref(user.data.vendorId + '/orders/')
     .orderByChild('userId')
-    .equalTo(user.data.uid)
+    .equalTo(user.data.id)
     .once('value', function (snapshot) {
       order = R.values(snapshot.val()).filter(x => x.status === 'Đang gọi món')
       if (!snapshot.val() || !order.length) {
@@ -44,7 +44,7 @@ export const submitOrder = (foodState, user, dispatch) => {
           totalPrice: R.sum(arrayItems.map(x => x.currentPrice * x.quantity)),
           items: arrayItems,
           userName: user.data.name,
-          userId: user.data.uid,
+          userId: user.data.id,
           id: key
         }
         firebase.database().ref(user.data.vendorId + '/orders/').child(key).set(order)
@@ -52,7 +52,7 @@ export const submitOrder = (foodState, user, dispatch) => {
       } else {
         order = order[0]
         key = order.id
-        order.items = order.items.concat(arrayItems)
+        order.items = order.items ? order.items.concat(arrayItems) : arrayItems
         order.updatedAt = moment.utc().format('YYYY-MM-DD hh-mm-ss')
         order.totalPrice = R.sum(order.items.map(x => x.currentPrice * x.quantity))
 
